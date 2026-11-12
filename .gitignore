@@ -1,0 +1,34 @@
+﻿
+# Private credentials and authentication tokens
+/config/acled_credentials.json
+/data/raw/acled/auth/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local refresh state, logs and snapshots
+/.cirv_refresh/
+
+# Old code and patch backups
+/backups/
+*.bak
+*.before_*
+*_backup.py
+*_before_fix.py
+
+# Downloaded source files: keep local for now
+/data/raw/
+
+# Local reference documents: review before sharing
+/*.pdf
+/*.xlsx
+/input/*.xlsx
+/cirv_integration_audit.json
+/config/.iasc_graph_token_cache.json

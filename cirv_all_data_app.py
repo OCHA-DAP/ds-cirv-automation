@@ -988,6 +988,267 @@ def table_html(wb, headers, data):
 
     return "".join(parts)
 
+
+
+def render_fts_scatterplots(cirv_data):
+ import streamlit as st
+ import pandas as pd
+ import numpy as np
+ import plotly.graph_objects as go
+
+ root = Path(__file__).resolve().parent
+ funding_path = root / "data" / "processed" / "fts_country_combined.csv"
+ annual_path = root / "data" / "processed" / "fts_country_annual.csv"
+
+ st.markdown("## CIRV vs Humanitarian Funding")
+
+ if not funding_path.exists() or not annual_path.exists():
+  st.info("FTS funding datasets are unavailable.")
+  return
+
+ funding = pd.read_csv(funding_path)
+ annual = pd.read_csv(annual_path)
+
+ # Default to HNRP plans only.
+ show_all = st.toggle(
+  "Include all coordinated plans",
+  value=False,
+  help="Off: HNRP countries only. On: all eligible coordinated plans."
+ )
+
+ if not show_all:
+  hnrp = annual[
+   annual["plan_type"]
+   .fillna("")
+   .str.lower()
+   .str.contains("humanitarian needs and response plan|humanitarian response plan")
+  ]
+
+  eligible_iso = set(hnrp["iso3"])
+  funding = funding[funding["iso3"].isin(eligible_iso)]
+
+ cirv = pd.DataFrame({
+  "iso3": cirv_data[2].astype(str).str.strip().str.upper(),
+  "cirv_score": pd.to_numeric(cirv_data[28], errors="coerce")
+ })
+
+ # Match country names directly from the CIRV table.
+ cirv_names = pd.DataFrame({
+  "iso3": cirv_data[2].astype(str).str.strip().str.upper(),
+  "cirv_country": cirv_data[1].astype(str).str.strip()
+ })
+
+ cirv_names = cirv_names.drop_duplicates("iso3")
+
+ merged = funding.merge(cirv, on="iso3", how="left")
+ merged = merged.merge(cirv_names, on="iso3", how="left")
+
+ # Use CIRV names for chart labels and tooltips.
+ merged["country"] = merged["cirv_country"].fillna(
+  merged["country"]
+ )
+
+ merged = merged.drop(columns=["cirv_country"])
+
+ charts = [
+  (
+   "2025 + 2026 Coordinated Plans",
+   "coverage_2025_2026",
+   "requirements_combined",
+   "funded_combined"
+  ),
+  (
+   "2026 Coordinated Plans",
+   "coverage_2026_plan",
+   "requirements_usd_2026",
+   "funded_usd_2026"
+  ),
+  (
+   "2026 Total Funding",
+   "coverage_2026_total",
+   "requirements_usd_2026",
+   "total_funded_usd_2026"
+  )
+ ]
+
+ for title, coverage_col, req_col, funded_col in charts:
+
+  st.markdown("### " + title)
+
+  plot = merged[
+   ["country", "iso3", "cirv_score", coverage_col, req_col, funded_col]
+  ].copy()
+
+  plot = plot.dropna()
+  plot = plot[plot[req_col] > 0]
+
+  if plot.empty:
+   st.warning("No eligible countries for this comparison.")
+   continue
+
+  plot["coverage_pct"] = plot[coverage_col] * 100
+
+  # Bubble areas proportional to requirements.
+  maximum = plot[req_col].max()
+  sizeref = 2 * maximum / (75 ** 2)
+
+  # Detect extreme funding coverage values.
+  q1 = plot["coverage_pct"].quantile(0.25)
+  q3 = plot["coverage_pct"].quantile(0.75)
+  iqr = q3 - q1
+
+  upper_limit = max(100.0, q3 + 1.5 * iqr)
+
+  outliers = plot[
+   plot["coverage_pct"] > upper_limit
+  ].copy()
+
+  regular = plot[
+   plot["coverage_pct"] <= upper_limit
+  ].copy()
+
+  show_full_axis = st.toggle(
+   "Show full X-axis including extreme values",
+   value=False,
+   key="full_axis_" + coverage_col
+  )
+
+  fig = go.Figure()
+
+  fig.add_trace(go.Scatter(
+   x=plot["coverage_pct"],
+   y=plot["cirv_score"],
+   mode="markers+text",
+   text=plot["country"],
+   textposition="top center",
+   textfont=dict(size=15, color="#263238"),
+   marker=dict(
+    size=plot[req_col],
+    sizemode="area",
+    sizeref=sizeref,
+    sizemin=10,
+    color="#4F81BD",
+    opacity=0.48,
+    line=dict(width=1.5, color="#245580")
+   ),
+   customdata=plot[[req_col, funded_col]].to_numpy(),
+   hovertemplate=(
+    "<b>%{text}</b><br>"
+    "Funding coverage: %{x:.1f}%<br>"
+    "CIRV: %{y:.1f}<br>"
+    "Requirements: $%{customdata[0]:,.0f}<br>"
+    "Funding: $%{customdata[1]:,.0f}"
+    "<extra></extra>"
+   ),
+   showlegend=False
+  ))
+
+  mean_x = plot["coverage_pct"].mean()
+  mean_y = plot["cirv_score"].mean()
+
+  fig.add_vline(
+   x=mean_x,
+   line_dash="dash",
+   line_color="#777777",
+   line_width=2
+  )
+
+  fig.add_hline(
+   y=mean_y,
+   line_dash="dash",
+   line_color="#777777",
+   line_width=2
+  )
+
+  # Keep all observations and averages unchanged.
+  # Only adjust the visible X-axis range.
+  if not show_full_axis and not regular.empty:
+   axis_max = max(
+    100.0,
+    regular["coverage_pct"].max() * 1.12
+   )
+
+   fig.update_xaxes(range=[0, axis_max])
+
+  fig.update_layout(
+   height=850,
+   margin=dict(l=95, r=100, t=60, b=100),
+   paper_bgcolor="white",
+   plot_bgcolor="white",
+   font=dict(size=17, color="#263238"),
+   xaxis=dict(
+    title=dict(
+     text="Funding coverage against requirements (%)",
+     font=dict(size=21)
+    ),
+    tickfont=dict(size=17),
+    ticksuffix="%",
+    showgrid=True,
+    gridcolor="#E5E5E5",
+    zeroline=False
+   ),
+   yaxis=dict(
+    title=dict(
+     text="CIRV Score",
+     font=dict(size=21)
+    ),
+    tickfont=dict(size=17),
+    showgrid=True,
+    gridcolor="#E5E5E5",
+    zeroline=False
+   ),
+   hoverlabel=dict(font_size=16)
+  )
+
+  st.plotly_chart(
+   fig,
+   use_container_width=True,
+   key="fts_" + coverage_col
+  )
+
+  st.markdown(
+   f"**Average funding coverage:** {mean_x:.1f}%"
+   f" &nbsp;&nbsp; | &nbsp;&nbsp; "
+   f"**Average CIRV:** {mean_y:.1f}"
+   f" &nbsp;&nbsp; | &nbsp;&nbsp; "
+   f"**Countries:** {len(plot)}",
+   unsafe_allow_html=True
+  )
+
+  st.markdown(
+   "<div style='font-size:16px;line-height:1.6;color:#555;'>Countries without comparable funding data or a valid CIRV "
+   "score are excluded. Multi-country regional and global plans "
+   "are excluded because they cannot be assigned a single-country "
+   "CIRV score. Bubble size represents coordinated-plan requirements."
+   "</div>",
+   unsafe_allow_html=True
+  )
+
+  if not outliers.empty:
+
+   st.markdown("**Extreme funding coverage values:**")
+
+   for _, row in outliers.sort_values(
+    "coverage_pct",
+    ascending=False
+   ).iterrows():
+
+    st.markdown(
+     f"* **{row['country']}**: "
+     f"{row['coverage_pct']:.1f}% funding coverage; "
+     f"CIRV {row['cirv_score']:.1f}. "
+     "Outside the default X-axis range."
+    )
+
+  st.download_button(
+   "Download chart data",
+   plot.to_csv(index=False).encode("utf-8-sig"),
+   file_name="CIRV_" + coverage_col + ".csv",
+   mime="text/csv",
+   key="download_" + coverage_col
+  )
+
+
 def main():
  import streamlit as st
  st.set_page_config(page_title='CERF CIRV',layout='wide',page_icon=get_page_icon());st.title('CERF CIRV | All Data')
@@ -999,6 +1260,7 @@ def main():
  q=st.text_input('Filter country / ISO3')
  view=data[data[1].astype(str).str.contains(q,case=False,regex=False)|data[2].str.contains(q,case=False,regex=False)] if q else data
  st.markdown(table_html(wb,headers,view),unsafe_allow_html=True)
+ render_fts_scatterplots(view)
  for key,df in sources.items():
   with st.expander('Source sheet: '+key):st.dataframe(df.reset_index(drop=True),hide_index=True,use_container_width=True)
  if errors:st.warning('Complete export blocked until required source errors are resolved. Source sheets remain available for inspection.')

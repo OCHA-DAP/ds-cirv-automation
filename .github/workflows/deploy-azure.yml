@@ -1,0 +1,46 @@
+# Deploys this repo to the CIRV web app on Azure.
+#
+# How to deploy: GitHub → Actions tab → "Deploy to Azure" → "Run workflow".
+# Nothing deploys automatically on push.
+#
+# What gets deployed: the repo as it is on the branch you pick (normally main).
+# Azure installs the packages listed in requirements.txt (repo root), then starts
+# the app with:
+#   python -m streamlit run cirv_all_data_app.py --server.port 8000 --server.address 0.0.0.0 --server.headless true
+# The startup command and any app settings are set in Azure, not in this file;
+# ask the data science team to change them.
+#
+# Auth: the AZURE_WEBAPP_PUBLISH_PROFILE repo secret, the publish profile of
+# this one slot (full access to the slot, nothing else). See DEPLOY.md.
+
+name: Deploy to Azure
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-azure
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check requirements.txt exists
+        run: |
+          if [ ! -f requirements.txt ]; then
+            echo "::error::requirements.txt is missing at the repo root. Azure needs it to install the app's packages."
+            exit 1
+          fi
+
+      - name: Deploy to Azure (chd-ds-demos, slot cirv)
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: chd-ds-demos
+          slot-name: cirv
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: .

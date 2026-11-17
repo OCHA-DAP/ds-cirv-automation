@@ -1,0 +1,151 @@
+﻿ISO3,CERF_Country,IASC_ScaleUp_Active,IASC_ScaleUp_Score,IASC_ScaleUp_Status,IASC_ScaleUp_Action,IASC_ScaleUp_Type,IASC_ScaleUp_Activation_Date,IASC_ScaleUp_Deactivation_Date,IASC_ScaleUp_End_Date,IASC_ScaleUp_Source_Title,IASC_ScaleUp_Source_URL,IASC_ScaleUp_Published_Date,IASC_ScaleUp_Detection,IASC_ScaleUp_Override_Note,IASC_ScaleUp_As_Of_Date
+AFG,Afghanistan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ALB,Albania,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+DZA,Algeria,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+AGO,Angola,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ATG,Antigua and Barbuda,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ARG,Argentina,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ARM,Armenia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+AZE,Azerbaijan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BHS,Bahamas,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BHR,Bahrain,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BGD,Bangladesh,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BRB,Barbados,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BLR,Belarus,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BLZ,Belize,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BEN,Benin,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BTN,Bhutan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BOL,Bolivia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BIH,Bosnia and Herzegovina,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BWA,Botswana,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BRA,Brazil,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BRN,Brunei Darussalam,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BFA,Burkina Faso,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+BDI,Burundi,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CPV,Cabo Verde,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KHM,Cambodia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CMR,Cameroon,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CAF,Central African Republic,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TCD,Chad,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CHL,Chile,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CHN,China,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+COL,Colombia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+COM,Comoros,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+COG,Congo,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+COD,Congo DR,True,100.0,Active System-Wide Scale-Up (manual audited override),Activation,Control of Infectious Disease Events,2026-06-09,,2027-03-09,Activation of IASC System-Wide Scale-Up Protocol for the Control of Infectious Disease Events – DRC Ebola,https://interagencystandingcommittee.org/iasc-humanitarian-system-wide-scale-activations-and-deactivations,2026-06-09,Manual audited override,Dynamically parsed from the 'Currently Active Scale-Ups' section of the authoritative IASC status page. Source entry: Democratic Republic of the Congo (Ebola virus disease) IASC Humanitarian System-Wide Scale-Up Protocol for the Control of Infectious Disease Events activated from 9 June and has been extended until 9 March 2027.,2026-11-04
+CRI,Costa Rica,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CUB,Cuba,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+CIV,Côte d'Ivoire,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+DJI,Djibouti,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+DMA,Dominica,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+DOM,Dominican Republic,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ECU,Ecuador,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+EGY,Egypt,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SLV,El Salvador,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GNQ,Equatorial Guinea,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ERI,Eritrea,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SWZ,Eswatini,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ETH,Ethiopia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+FJI,Fiji,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GAB,Gabon,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GMB,Gambia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GEO,Georgia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GHA,Ghana,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GTM,Guatemala,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GIN,Guinea,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GNB,Guinea-Bissau,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+GUY,Guyana,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+HTI,Haiti,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+HND,Honduras,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+IND,India,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+IDN,Indonesia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+IRN,Iran,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+IRQ,Iraq,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ISR,Israel,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+JAM,Jamaica,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+JOR,Jordan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KAZ,Kazakhstan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KEN,Kenya,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KIR,Kiribati,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PRK,Korea DPR,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KOR,Korea Republic of,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KWT,Kuwait,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KGZ,Kyrgyzstan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LAO,Lao PDR,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LBN,Lebanon,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LSO,Lesotho,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LBR,Liberia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LBY,Libya,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MDG,Madagascar,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MWI,Malawi,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MYS,Malaysia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MDV,Maldives,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MLI,Mali,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MHL,Marshall Islands,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MRT,Mauritania,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MUS,Mauritius,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MEX,Mexico,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+FSM,Micronesia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MDA,Moldova Republic of,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MNG,Mongolia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MNE,Montenegro,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MAR,Morocco,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MOZ,Mozambique,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MMR,Myanmar,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+NAM,Namibia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+NRU,Nauru,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+NPL,Nepal,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+NIC,Nicaragua,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+NER,Niger,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+NGA,Nigeria,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+MKD,North Macedonia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+OMN,Oman,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PAK,Pakistan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PLW,Palau,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PAN,Panama,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PNG,Papua New Guinea,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PRY,Paraguay,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PER,Peru,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PHL,Philippines,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+QAT,Qatar,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+RUS,Russian Federation,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+RWA,Rwanda,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+KNA,Saint Kitts and Nevis,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LCA,Saint Lucia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+VCT,Saint Vincent and the Grenadines,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+WSM,Samoa,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+STP,Sao Tome and Principe,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SEN,Senegal,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SRB,Serbia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SYC,Seychelles,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SLE,Sierra Leone,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SLB,Solomon Islands,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SOM,Somalia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ZAF,South Africa,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SSD,South Sudan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+LKA,Sri Lanka,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SDN,Sudan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SUR,Suriname,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+SYR,Syria,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TJK,Tajikistan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TZA,Tanzania,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+THA,Thailand,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TLS,Timor-Leste,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TGO,Togo,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TON,Tonga,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TTO,Trinidad and Tobago,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TUN,Tunisia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TKM,Turkmenistan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TUV,Tuvalu,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+TUR,Türkiye,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+UGA,Uganda,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+UKR,Ukraine,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+URY,Uruguay,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+UZB,Uzbekistan,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+VUT,Vanuatu,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+VEN,Venezuela,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+VNM,Viet Nam,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+YEM,Yemen,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ZMB,Zambia,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+ZWE,Zimbabwe,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04
+PSE,oPt,False,,No active public Scale-Up identified,,,,,,,,,,,2026-11-04

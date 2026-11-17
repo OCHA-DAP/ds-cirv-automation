@@ -1,0 +1,151 @@
+﻿ISO3,CERF_Country,ipc_row_present,fewsnet_row_present,grfc_row_present,fao_row_present,asap_row_present,sofi_row_present,HDX_IPC_Available,FEWSNET_Available,GRFC_Available,FAO_Available,ASAP_Available,SOFI_Available,Available_Block_Count,Available_Blocks,Missing_Blocks,Available_Base_Weight,CERF_Food_Insecurity
+AFG,Afghanistan,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,78.56
+ALB,Albania,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,31.8
+DZA,Algeria,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,17.6
+AGO,Angola,True,True,False,False,True,True,False,True,False,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,48.849999999999994
+ATG,Antigua and Barbuda,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+ARG,Argentina,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,31.7
+ARM,Armenia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,7.1
+AZE,Azerbaijan,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,14.6
+BHS,Bahamas,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+BHR,Bahrain,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+BGD,Bangladesh,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,73.24
+BRB,Barbados,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+BLR,Belarus,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,1.0
+BLZ,Belize,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,12.800000000000002
+BEN,Benin,True,False,False,False,True,True,True,False,False,False,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,71.12
+BTN,Bhutan,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+BOL,Bolivia,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,29.6
+BIH,Bosnia and Herzegovina,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,8.7
+BWA,Botswana,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,52.0
+BRA,Brazil,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,9.6
+BRN,Brunei Darussalam,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+BFA,Burkina Faso,True,True,False,True,True,True,False,True,False,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,71.24
+BDI,Burundi,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,82.16
+CPV,Cabo Verde,True,False,False,False,False,True,True,False,False,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,53.025
+KHM,Cambodia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,36.4
+CMR,Cameroon,True,True,True,True,True,True,True,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,80.18
+CAF,Central African Republic,True,False,True,True,True,False,True,False,True,True,False,False,2,"IPC, FAO/ASAP",SOFI,0.8,85.0
+TCD,Chad,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,76.0
+CHL,Chile,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,16.0
+CHN,China,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+COL,Colombia,True,True,True,False,True,True,False,True,True,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,52.0
+COM,Comoros,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+COG,Congo,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+COD,Congo DR,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,79.34
+CRI,Costa Rica,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,13.9
+CUB,Cuba,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+CIV,Côte d'Ivoire,True,False,False,False,True,True,True,False,False,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,69.475
+DJI,Djibouti,True,False,True,True,True,False,True,False,True,True,False,False,2,"IPC, FAO/ASAP",SOFI,0.8,85.0
+DMA,Dominica,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+DOM,Dominican Republic,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,41.3
+ECU,Ecuador,True,False,False,False,True,True,True,False,False,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,67.77499999999999
+EGY,Egypt,True,False,True,False,True,True,False,False,True,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,52.475
+SLV,El Salvador,True,False,True,False,True,True,False,False,True,False,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,54.34
+GNQ,Equatorial Guinea,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+ERI,Eritrea,True,False,False,False,True,False,False,False,False,False,True,False,1,FAO/ASAP,"IPC, SOFI",0.2,50.0
+SWZ,Eswatini,True,False,False,True,True,True,True,False,False,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,68.34
+ETH,Ethiopia,True,False,False,True,True,True,False,False,False,True,True,True,2,"FAO/ASAP, SOFI",IPC,0.4,67.55
+FJI,Fiji,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+GAB,Gabon,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+GMB,Gambia,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,47.2
+GEO,Georgia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,22.8
+GHA,Ghana,True,False,False,False,True,True,True,False,False,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,70.875
+GTM,Guatemala,True,True,True,False,True,True,True,True,True,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,72.24999999999999
+GIN,Guinea,True,False,True,True,True,False,True,False,True,True,False,False,2,"IPC, FAO/ASAP",SOFI,0.8,85.0
+GNB,Guinea-Bissau,True,False,True,False,True,False,False,False,True,False,False,False,1,IPC,"FAO/ASAP, SOFI",0.6,60.0
+GUY,Guyana,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,25.5
+HTI,Haiti,True,True,True,True,True,True,True,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,84.7
+HND,Honduras,True,False,True,False,True,True,True,False,True,False,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,65.86
+IND,India,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+IDN,Indonesia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,4.2
+IRN,Iran,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,37.7
+IRQ,Iraq,True,False,True,False,True,False,False,False,True,False,False,False,1,IPC,"FAO/ASAP, SOFI",0.6,60.0
+ISR,Israel,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,8.9
+JAM,Jamaica,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,55.8
+JOR,Jordan,True,False,True,False,False,False,False,False,True,False,False,False,1,IPC,"FAO/ASAP, SOFI",0.6,60.0
+KAZ,Kazakhstan,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,1.3999999999999997
+KEN,Kenya,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,77.34
+KIR,Kiribati,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,43.89999999999999
+PRK,Korea DPR,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+KOR,Korea Republic of,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,5.799999999999999
+KWT,Kuwait,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,9.4
+KGZ,Kyrgyzstan,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,7.4
+LAO,Lao PDR,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,34.4
+LBN,Lebanon,True,True,True,True,False,True,True,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,76.86
+LSO,Lesotho,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,68.32
+LBR,Liberia,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,71.8
+LBY,Libya,True,False,False,True,True,True,False,False,False,True,False,True,2,"FAO/ASAP, SOFI",IPC,0.4,65.8
+MDG,Madagascar,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,75.22
+MWI,Malawi,True,True,True,True,True,True,True,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,72.32
+MYS,Malaysia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,15.4
+MDV,Maldives,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+MLI,Mali,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,67.12
+MHL,Marshall Islands,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+MRT,Mauritania,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,69.02
+MUS,Mauritius,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,28.200000000000003
+MEX,Mexico,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,16.5
+FSM,Micronesia,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+MDA,Moldova Republic of,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,26.4
+MNG,Mongolia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,4.7
+MNE,Montenegro,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,9.0
+MAR,Morocco,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+MOZ,Mozambique,True,True,True,True,True,False,True,True,True,True,False,False,2,"IPC, FAO/ASAP",SOFI,0.8,85.0
+MMR,Myanmar,True,False,True,True,False,True,False,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,74.26
+NAM,Namibia,True,False,True,True,True,True,False,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,78.8
+NRU,Nauru,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+NPL,Nepal,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,35.0
+NIC,Nicaragua,True,False,False,False,True,False,False,False,False,False,True,False,1,FAO/ASAP,"IPC, SOFI",0.2,50.0
+NER,Niger,True,True,True,True,True,True,True,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,78.06
+NGA,Nigeria,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,78.3
+MKD,North Macedonia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,9.2
+OMN,Oman,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+PAK,Pakistan,True,True,True,True,True,True,True,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,72.58
+PLW,Palau,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,28.100000000000005
+PAN,Panama,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+PNG,Papua New Guinea,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+PRY,Paraguay,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,25.8
+PER,Peru,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,33.6
+PHL,Philippines,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,32.7
+QAT,Qatar,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+RUS,Russian Federation,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,2.6
+RWA,Rwanda,True,False,True,False,True,False,False,False,True,False,False,False,1,IPC,"FAO/ASAP, SOFI",0.6,80.0
+KNA,Saint Kitts and Nevis,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+LCA,Saint Lucia,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+VCT,Saint Vincent and the Grenadines,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+WSM,Samoa,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,18.2
+STP,Sao Tome and Principe,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+SEN,Senegal,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,73.54
+SRB,Serbia,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,6.7
+SYC,Seychelles,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+SLE,Sierra Leone,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,85.62
+SLB,Solomon Islands,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+SOM,Somalia,True,True,True,True,True,False,True,True,True,True,True,False,2,"IPC, FAO/ASAP",SOFI,0.8,85.0
+ZAF,South Africa,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,20.9
+SSD,South Sudan,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,97.76
+LKA,Sri Lanka,True,True,True,False,True,True,False,True,True,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,32.525
+SDN,Sudan,True,True,True,True,True,False,True,True,True,True,True,False,2,"IPC, FAO/ASAP",SOFI,0.8,100.0
+SUR,Suriname,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+SYR,Syria,True,True,True,True,True,False,False,True,True,True,True,False,2,"IPC, FAO/ASAP",SOFI,0.8,63.75
+TJK,Tajikistan,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,24.000000000000004
+TZA,Tanzania,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,67.4
+THA,Thailand,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,4.5
+TLS,Timor-Leste,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+TGO,Togo,True,False,False,False,True,True,True,False,False,False,False,True,2,"IPC, SOFI",FAO/ASAP,0.8,59.074999999999996
+TON,Tonga,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+TTO,Trinidad and Tobago,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,27.6
+TUN,Tunisia,True,False,False,False,True,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,24.2
+TKM,Turkmenistan,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+TUV,Tuvalu,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+TUR,Türkiye,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+UGA,Uganda,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,73.32
+UKR,Ukraine,True,True,True,True,False,True,False,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,62.4
+URY,Uruguay,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,15.5
+UZB,Uzbekistan,True,False,False,False,True,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+VUT,Vanuatu,True,False,False,False,False,False,False,False,False,False,False,False,0,,"IPC, FAO/ASAP, SOFI",0.0,0.0
+VEN,Venezuela,True,True,False,False,False,False,False,True,False,False,False,False,1,IPC,"FAO/ASAP, SOFI",0.6,40.0
+VNM,Viet Nam,True,False,False,False,False,True,False,False,False,False,False,True,1,SOFI,"IPC, FAO/ASAP",0.2,9.4
+YEM,Yemen,True,True,True,True,True,True,True,True,True,True,True,True,3,"IPC, FAO/ASAP, SOFI",,1.0,89.88
+ZMB,Zambia,True,False,True,True,True,True,True,False,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,65.16
+ZWE,Zimbabwe,True,True,True,True,True,True,False,True,True,True,False,True,3,"IPC, FAO/ASAP, SOFI",,1.0,70.02
+PSE,oPt,True,False,True,True,False,False,True,False,True,True,False,False,2,"IPC, FAO/ASAP",SOFI,0.8,100.0

@@ -1,0 +1,47 @@
+{
+  "source": "2026 Inter-Agency Early Warning Brief 26102026.pdf",
+  "generated_at_utc": "2026-11-04T18:00:36.036131+00:00",
+  "decoder_scope": "Tested Low/High/Very High gauge encodings; unknown encodings are flagged, never guessed",
+  "profile_method": "Direct embedded badge-image extraction; gauge fill geometry; no OCR",
+  "tracker_method": "PyMuPDF structured table extraction; explicit Seriousness field",
+  "matrix": {
+    "1": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 2,
+      "5": 2
+    },
+    "2": {
+      "1": 1,
+      "2": 2,
+      "3": 2,
+      "4": 3,
+      "5": 3
+    },
+    "3": {
+      "1": 2,
+      "2": 2,
+      "3": 3,
+      "4": 3,
+      "5": 4
+    },
+    "4": {
+      "1": 2,
+      "2": 3,
+      "3": 3,
+      "4": 4,
+      "5": 4
+    },
+    "5": {
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 4,
+      "5": 5
+    }
+  },
+  "listed_countries": 19,
+  "evidence_records": 25,
+  "unmatched_records": 0
+}

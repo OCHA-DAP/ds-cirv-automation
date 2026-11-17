@@ -1,0 +1,151 @@
+﻿Country,ISO3,August_HDX_IPC,August_FEWSNET,August_GRFC,Workbook_IPC_Classification,August_FAO,August_ASAP,August_SOFI,Workbook_CERF_Food_Insecurity,Python_IPC_Classification,Python_IPC_Source,Python_IPC_Override_Reason,IPC_Difference,IPC_Parity_Status,August_FAO_Available,August_ASAP_Available,August_FAO_Score_100,August_ASAP_Score_100,August_Shock_Block,August_Shock_Method,August_IPC_Score_100,August_SOFI_Available,August_Available_Base_Weight,Python_CERF_Food_Insecurity,Food_Security_Difference,Food_Security_Absolute_Difference,Food_Security_Parity_Status
+Afghanistan,AFG,4.0,3.0,4.0,4.0,2.0,1.0,77.8,78.56,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,80.0,True,1.0,78.56,0.0,0.0,MATCH
+Albania,ALB,,0.0,0.0,0.0,0.0,,31.8,31.800000000000004,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,31.8,-3.552713678800501e-15,3.552713678800501e-15,MATCH
+Algeria,DZA,,0.0,0.0,0.0,0.0,0.0,17.6,17.600000000000005,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,17.6,-3.552713678800501e-15,3.552713678800501e-15,MATCH
+Angola,AGO,,0.0,0.0,0.0,0.0,1.0,75.4,62.699999999999996,,,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,,True,0.4,62.7,7.105427357601002e-15,7.105427357601002e-15,MATCH
+Antigua and Barbuda,ATG,,0.0,0.0,0.0,0.0,,13.5,13.5,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,13.5,0.0,0.0,MATCH
+Argentina,ARG,,0.0,0.0,0.0,0.0,,31.7,31.7,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,31.7,0.0,0.0,MATCH
+Armenia,ARM,,0.0,0.0,0.0,0.0,,7.8,7.800000000000001,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,7.8,-8.881784197001252e-16,8.881784197001252e-16,MATCH
+Azerbaijan,AZE,,0.0,0.0,0.0,0.0,,14.6,14.6,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,14.6,0.0,0.0,MATCH
+Bahamas,BHS,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Bahrain,BHR,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Bangladesh,BGD,4.0,0.0,4.0,4.0,2.0,0.0,26.2,73.24,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,73.24,0.0,0.0,MATCH
+Barbados,BRB,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Belarus,BLR,,0.0,0.0,0.0,0.0,,1.0,1.0000000000000002,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,1.0,-2.220446049250313e-16,2.220446049250313e-16,MATCH
+Belize,BLZ,,0.0,0.0,0.0,0.0,,12.8,12.799999999999999,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,12.800000000000002,3.552713678800501e-15,3.552713678800501e-15,MATCH
+Benin,BEN,4.0,0.0,0.0,4.0,0.0,1.0,65.6,71.12,4.0,HDX IPC,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,80.0,True,1.0,71.12,0.0,0.0,MATCH
+Bhutan,BTN,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Bolivia,BOL,,0.0,0.0,0.0,0.0,0.0,29.6,29.599999999999998,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,29.6,3.552713678800501e-15,3.552713678800501e-15,MATCH
+Bosnia and Herzegovina,BIH,,0.0,0.0,0.0,0.0,,8.7,8.699999999999998,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,8.7,1.7763568394002505e-15,1.7763568394002505e-15,MATCH
+Botswana,BWA,,0.0,0.0,0.0,0.0,0.0,52.0,52.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,52.0,0.0,0.0,MATCH
+Brazil,BRA,,0.0,0.0,0.0,0.0,,9.6,9.6,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,9.6,0.0,0.0,MATCH
+Brunei Darussalam,BRN,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Burkina Faso,BFA,,3.0,0.0,3.0,2.0,0.0,41.2,64.24,3.0,FEWS NET,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,60.0,True,1.0,64.24,0.0,0.0,MATCH
+Burundi,BDI,4.0,2.0,0.0,4.0,2.0,0.0,70.8,82.16,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,82.16,0.0,0.0,MATCH
+Cabo Verde,CPV,3.0,0.0,0.0,3.0,0.0,,32.1,53.025,3.0,HDX IPC,,0.0,MATCH,False,False,,,,Shock block unavailable,60.0,True,0.8,53.025,0.0,0.0,MATCH
+Cambodia,KHM,,0.0,0.0,0.0,0.0,,36.4,36.39999999999999,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,36.4,7.105427357601002e-15,7.105427357601002e-15,MATCH
+Cameroon,CMR,4.0,3.0,0.0,4.0,2.0,0.0,60.9,80.18,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,80.18,0.0,0.0,MATCH
+Central African Republic,CAF,4.0,3.0,4.0,4.0,2.0,0.0,0.0,85.0,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,False,0.8,85.0,0.0,0.0,MATCH
+Chad,TCD,4.0,3.0,4.0,4.0,2.0,1.0,65.0,76.0,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,80.0,True,1.0,76.0,0.0,0.0,MATCH
+Chile,CHL,,0.0,0.0,0.0,0.0,,16.0,16.000000000000004,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,16.0,-3.552713678800501e-15,3.552713678800501e-15,MATCH
+China,CHN,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Colombia,COL,,0.0,0.0,0.0,0.0,1.0,28.0,39.0,,,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,,True,0.4,39.0,0.0,0.0,MATCH
+Comoros,COM,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Congo,COG,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Congo DR,COD,4.0,3.0,4.0,4.0,2.0,1.0,81.7,79.34,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,80.0,True,1.0,79.34,0.0,0.0,MATCH
+Costa Rica,CRI,,0.0,0.0,0.0,0.0,,13.9,13.9,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,13.9,0.0,0.0,MATCH
+Côte d'Ivoire,CIV,4.0,0.0,0.0,4.0,0.0,0.0,37.9,69.475,4.0,HDX IPC,,0.0,MATCH,False,False,,,,Shock block unavailable,80.0,True,0.8,69.475,0.0,0.0,MATCH
+Cuba,CUB,,0.0,0.0,0.0,0.0,1.0,0.0,50.0,,,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,,False,0.2,50.0,0.0,0.0,MATCH
+Djibouti,DJI,4.0,0.0,0.0,4.0,2.0,0.0,0.0,85.0,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,False,0.8,85.0,0.0,0.0,MATCH
+Dominica,DMA,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Dominican Republic,DOM,,0.0,0.0,0.0,0.0,,41.3,41.300000000000004,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,41.3,-7.105427357601002e-15,7.105427357601002e-15,MATCH
+Ecuador,ECU,4.0,0.0,0.0,4.0,0.0,0.0,31.1,67.77499999999999,4.0,HDX IPC,,0.0,MATCH,False,False,,,,Shock block unavailable,80.0,True,0.8,67.77499999999999,0.0,0.0,MATCH
+Egypt,EGY,,0.0,0.0,0.0,0.0,0.0,29.9,29.899999999999995,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,29.900000000000002,7.105427357601002e-15,7.105427357601002e-15,MATCH
+El Salvador,SLV,,2.0,0.0,2.0,0.0,1.0,41.7,42.34,2.0,FEWS NET,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,40.0,True,1.0,42.34,0.0,0.0,MATCH
+Equatorial Guinea,GNQ,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Eritrea,ERI,,0.0,0.0,0.0,0.0,1.0,0.0,50.0,,,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,,False,0.2,50.0,0.0,0.0,MATCH
+Eswatini,SWZ,4.0,0.0,0.0,4.0,2.0,0.0,61.7,80.33999999999999,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,80.34,1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Ethiopia,ETH,,0.0,0.0,0.0,2.0,1.0,60.1,67.55,,,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,,True,0.4,67.55,0.0,0.0,MATCH
+Fiji,FJI,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Gabon,GAB,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Gambia,GMB,,0.0,0.0,0.0,0.0,0.0,47.2,47.2,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,47.2,0.0,0.0,MATCH
+Georgia,GEO,,0.0,0.0,0.0,0.0,,22.8,22.8,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,22.8,0.0,0.0,MATCH
+Ghana,GHA,4.0,0.0,0.0,4.0,0.0,0.0,43.5,70.875,4.0,HDX IPC,,0.0,MATCH,False,False,,,,Shock block unavailable,80.0,True,0.8,70.875,0.0,0.0,MATCH
+Guatemala,GTM,4.0,3.0,0.0,4.0,0.0,0.0,49.0,72.25,4.0,HDX IPC,,0.0,MATCH,False,False,,,,Shock block unavailable,80.0,True,0.8,72.24999999999999,-1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Guinea,GIN,4.0,0.0,3.0,4.0,2.0,0.0,0.0,85.0,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,False,0.8,85.0,0.0,0.0,MATCH
+Guinea-Bissau,GNB,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Guyana,GUY,,0.0,0.0,0.0,0.0,,25.5,25.499999999999996,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,25.5,3.552713678800501e-15,3.552713678800501e-15,MATCH
+Haiti,HTI,4.0,4.0,5.0,4.0,2.0,0.0,83.5,84.69999999999999,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,84.7,1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Honduras,HND,4.0,3.0,0.0,4.0,0.0,1.0,39.3,65.86,4.0,HDX IPC,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,80.0,True,1.0,65.86,0.0,0.0,MATCH
+India,IND,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Indonesia,IDN,,0.0,0.0,0.0,0.0,,4.2,4.200000000000001,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,4.2,-8.881784197001252e-16,8.881784197001252e-16,MATCH
+Iran,IRN,,0.0,0.0,0.0,0.0,0.0,37.7,37.7,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,37.7,0.0,0.0,MATCH
+Iraq,IRQ,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Israel,ISR,,0.0,0.0,0.0,0.0,,8.9,8.9,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,8.9,0.0,0.0,MATCH
+Jamaica,JAM,,0.0,0.0,0.0,0.0,,55.8,55.8,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,55.8,0.0,0.0,MATCH
+Jordan,JOR,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Kazakhstan,KAZ,,0.0,0.0,0.0,0.0,0.0,1.4,1.3999999999999997,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,1.3999999999999997,0.0,0.0,MATCH
+Kenya,KEN,,3.0,3.0,3.0,2.0,1.0,71.7,65.34,3.0,FEWS NET,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,60.0,True,1.0,65.34,0.0,0.0,MATCH
+Kiribati,KIR,,0.0,0.0,0.0,0.0,,43.9,43.89999999999999,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,43.89999999999999,0.0,0.0,MATCH
+Korea DPR,PRK,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Korea Republic of,KOR,,0.0,0.0,0.0,0.0,,5.8,5.799999999999999,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,5.799999999999999,0.0,0.0,MATCH
+Kuwait,KWT,,0.0,0.0,0.0,0.0,,9.4,9.4,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,9.4,0.0,0.0,MATCH
+Kyrgyzstan,KGZ,,0.0,0.0,0.0,0.0,0.0,7.4,7.3999999999999995,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,7.4,8.881784197001252e-16,8.881784197001252e-16,MATCH
+Lao PDR,LAO,,0.0,0.0,0.0,0.0,,34.4,34.4,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,34.4,0.0,0.0,MATCH
+Lebanon,LBN,4.0,3.0,0.0,4.0,2.0,,44.3,76.86,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,76.86,0.0,0.0,MATCH
+Lesotho,LSO,3.0,0.0,0.0,3.0,2.0,0.0,61.6,68.32,3.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,60.0,True,1.0,68.32,0.0,0.0,MATCH
+Liberia,LBR,4.0,0.0,0.0,4.0,2.0,0.0,79.0,83.79999999999998,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,83.8,1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Libya,LBY,,0.0,0.0,0.0,2.0,1.0,31.6,53.3,,,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,,True,0.4,53.3,0.0,0.0,MATCH
+Madagascar,MDG,4.0,3.0,3.0,4.0,2.0,1.0,61.1,75.22,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,80.0,True,1.0,75.22,0.0,0.0,MATCH
+Malawi,MWI,3.0,3.0,3.0,3.0,2.0,0.0,81.6,72.32,3.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,60.0,True,1.0,72.32,0.0,0.0,MATCH
+Malaysia,MYS,,0.0,0.0,0.0,0.0,,15.4,15.400000000000002,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,15.4,-1.7763568394002505e-15,1.7763568394002505e-15,MATCH
+Maldives,MDV,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Mali,MLI,4.0,4.0,5.0,4.0,2.0,1.0,20.6,67.12,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,80.0,True,1.0,67.12,0.0,0.0,MATCH
+Marshall Islands,MHL,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Mauritania,MRT,4.0,0.0,0.0,4.0,2.0,0.0,65.1,81.02000000000001,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,81.02,-1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Mauritius,MUS,,0.0,0.0,0.0,0.0,,28.2,28.199999999999996,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,28.200000000000003,7.105427357601002e-15,7.105427357601002e-15,MATCH
+Mexico,MEX,,0.0,0.0,0.0,0.0,,16.5,16.5,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,16.5,0.0,0.0,MATCH
+Micronesia,FSM,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Moldova Republic of,MDA,,0.0,0.0,0.0,0.0,,26.4,26.399999999999995,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,26.4,3.552713678800501e-15,3.552713678800501e-15,MATCH
+Mongolia,MNG,,0.0,0.0,0.0,0.0,,4.7,4.7,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,4.7,0.0,0.0,MATCH
+Montenegro,MNE,,0.0,0.0,0.0,0.0,,9.0,9.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,9.0,0.0,0.0,MATCH
+Morocco,MAR,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Mozambique,MOZ,4.0,3.0,0.0,4.0,2.0,1.0,0.0,78.75,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,80.0,False,0.8,78.75,0.0,0.0,MATCH
+Myanmar,MMR,,0.0,4.0,4.0,2.0,,31.3,74.26,4.0,GRFC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,74.26,0.0,0.0,MATCH
+Namibia,NAM,,0.0,4.0,4.0,2.0,0.0,54.0,78.8,4.0,GRFC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,78.8,0.0,0.0,MATCH
+Nauru,NRU,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Nepal,NPL,,0.0,0.0,0.0,0.0,0.0,35.0,35.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,35.0,0.0,0.0,MATCH
+Nicaragua,NIC,,0.0,0.0,0.0,0.0,1.0,0.0,50.0,,,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,,False,0.2,50.0,0.0,0.0,MATCH
+Niger,NER,4.0,3.0,3.0,4.0,2.0,0.0,50.3,78.06,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,78.06,0.0,0.0,MATCH
+Nigeria,NGA,5.0,4.0,3.0,5.0,2.0,1.0,76.5,90.30000000000001,5.0,HDX IPC,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,100.0,True,1.0,90.3,-1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+North Macedonia,MKD,,0.0,0.0,0.0,0.0,,15.2,15.200000000000001,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,15.2,-1.7763568394002505e-15,1.7763568394002505e-15,MATCH
+Oman,OMN,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Pakistan,PAK,4.0,0.0,4.0,4.0,2.0,,22.9,72.58,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,72.58,0.0,0.0,MATCH
+Palau,PLW,,0.0,0.0,0.0,0.0,0.0,28.1,28.100000000000005,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,28.100000000000005,0.0,0.0,MATCH
+oPt,PSE,4.0,0.0,5.0,4.0,2.0,,0.0,85.0,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,False,0.8,85.0,0.0,0.0,MATCH
+Panama,PAN,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Papua New Guinea,PNG,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Paraguay,PRY,,0.0,0.0,0.0,0.0,,25.8,25.8,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,25.8,0.0,0.0,MATCH
+Peru,PER,,0.0,0.0,0.0,0.0,0.0,33.6,33.60000000000001,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,33.6,-7.105427357601002e-15,7.105427357601002e-15,MATCH
+Philippines,PHL,,0.0,0.0,0.0,0.0,,32.7,32.7,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,32.7,0.0,0.0,MATCH
+Qatar,QAT,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Russian Federation,RUS,,0.0,0.0,0.0,0.0,,2.6,2.6,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,2.6,0.0,0.0,MATCH
+Rwanda,RWA,,0.0,0.0,0.0,0.0,1.0,0.0,50.0,,,,0.0,MATCH,False,True,,50.0,50.0,ASAP takes full shock block,,False,0.2,50.0,0.0,0.0,MATCH
+Saint Kitts and Nevis,KNA,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Saint Lucia,LCA,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Saint Vincent and the Grenadines,VCT,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Samoa,WSM,,0.0,0.0,0.0,0.0,,18.2,18.199999999999996,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,18.2,3.552713678800501e-15,3.552713678800501e-15,MATCH
+Sao Tome and Principe,STP,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Senegal,SEN,4.0,0.0,0.0,4.0,2.0,0.0,27.7,73.54,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,73.54,0.0,0.0,MATCH
+Serbia,SRB,,0.0,0.0,0.0,0.0,,6.7,6.7,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,6.7,0.0,0.0,MATCH
+Seychelles,SYC,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Sierra Leone,SLE,4.0,0.0,3.0,4.0,2.0,0.0,88.1,85.61999999999999,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,85.62,1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Solomon Islands,SLB,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Somalia,SOM,4.0,4.0,3.0,4.0,2.0,2.0,0.0,85.0,4.0,HDX IPC,,0.0,MATCH,True,True,100.0,100.0,100.0,FAO and ASAP split block equally,80.0,False,0.8,85.0,0.0,0.0,MATCH
+South Africa,ZAF,,0.0,0.0,0.0,0.0,0.0,20.9,20.9,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,20.9,0.0,0.0,MATCH
+South Sudan,SSD,5.0,4.0,5.0,5.0,2.0,2.0,88.8,97.75999999999999,5.0,HDX IPC,,0.0,MATCH,True,True,100.0,100.0,100.0,FAO and ASAP split block equally,100.0,True,1.0,97.76,1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Sri Lanka,LKA,,0.0,0.0,0.0,0.0,0.0,10.1,10.1,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,10.1,0.0,0.0,MATCH
+Sudan,SDN,5.0,4.0,5.0,5.0,2.0,2.0,0.0,100.0,5.0,HDX IPC,,0.0,MATCH,True,True,100.0,100.0,100.0,FAO and ASAP split block equally,100.0,False,0.8,100.0,0.0,0.0,MATCH
+Suriname,SUR,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Syria,SYR,,3.0,0.0,3.0,2.0,1.0,0.0,63.75,3.0,FEWS NET,,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,60.0,False,0.8,63.75,0.0,0.0,MATCH
+Tajikistan,TJK,,0.0,0.0,0.0,0.0,0.0,24.0,23.999999999999996,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,24.000000000000004,7.105427357601002e-15,7.105427357601002e-15,MATCH
+Tanzania,TZA,3.0,0.0,3.0,3.0,2.0,0.0,57.0,67.4,3.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,60.0,True,1.0,67.4,0.0,0.0,MATCH
+Thailand,THA,,0.0,0.0,0.0,0.0,,4.5,4.5,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,4.5,0.0,0.0,MATCH
+Timor-Leste,TLS,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Togo,TGO,3.0,0.0,0.0,3.0,0.0,0.0,56.3,59.074999999999996,3.0,HDX IPC,,0.0,MATCH,False,False,,,,Shock block unavailable,60.0,True,0.8,59.074999999999996,0.0,0.0,MATCH
+Tonga,TON,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Trinidad and Tobago,TTO,,0.0,0.0,0.0,0.0,,27.6,27.6,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,27.6,0.0,0.0,MATCH
+Tunisia,TUN,,0.0,0.0,0.0,0.0,0.0,24.2,24.2,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,24.2,0.0,0.0,MATCH
+Türkiye,TUR,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Turkmenistan,TKM,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Tuvalu,TUV,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Uganda,UGA,4.0,0.0,3.0,4.0,2.0,0.0,51.6,78.32,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,78.32,0.0,0.0,MATCH
+Ukraine,UKR,,0.0,0.0,0.0,2.0,,32.0,66.0,,,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,,True,0.4,65.99999999999999,-1.4210854715202004e-14,1.4210854715202004e-14,MATCH
+Uruguay,URY,,0.0,0.0,0.0,0.0,,15.5,15.500000000000002,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,15.5,-1.7763568394002505e-15,1.7763568394002505e-15,MATCH
+Uzbekistan,UZB,,0.0,0.0,0.0,0.0,0.0,24.4,24.4,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,24.4,0.0,0.0,MATCH
+Vanuatu,VUT,,0.0,0.0,0.0,0.0,,0.0,0.0,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,False,0.0,0.0,0.0,0.0,MATCH
+Venezuela,VEN,,2.0,0.0,2.0,0.0,,0.0,40.0,2.0,FEWS NET,,0.0,MATCH,False,False,,,,Shock block unavailable,40.0,False,0.6,40.0,0.0,0.0,MATCH
+Viet Nam,VNM,,0.0,0.0,0.0,0.0,,9.4,9.4,,,,0.0,MATCH,False,False,,,,Shock block unavailable,,True,0.2,9.4,0.0,0.0,MATCH
+Yemen,YEM,4.0,4.0,5.0,5.0,2.0,1.0,74.4,89.88,5.0,CERF manual override,CERF manual adjustment reflecting the likely prevalence of IPC Phase 5 in DFA-controlled areas where current IPC analysis was unavailable.,0.0,MATCH,True,True,100.0,50.0,75.0,FAO and ASAP split block equally,100.0,True,1.0,89.88,0.0,0.0,MATCH
+Zambia,ZMB,4.0,0.0,3.0,4.0,2.0,0.0,45.8,77.16,4.0,HDX IPC,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,80.0,True,1.0,77.16,0.0,0.0,MATCH
+Zimbabwe,ZWE,,3.0,3.0,3.0,2.0,0.0,70.1,70.02,3.0,FEWS NET,,0.0,MATCH,True,False,100.0,,100.0,FAO takes full shock block,60.0,True,1.0,70.02,0.0,0.0,MATCH

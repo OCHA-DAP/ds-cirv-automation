@@ -1,0 +1,43 @@
+{
+  "method": "CERF Food Security consolidated score using IPC 60 percent, FAO/ASAP block 20 percent, and SOFI 20 percent. Missing blocks are removed and remaining weights are renormalized.",
+  "historical_parity": {
+    "workbook": "260810 CERF UFE 2026-I CIRV and Funding Analysis",
+    "ipc_matches": 150,
+    "food_security_matches": 150,
+    "mismatches": 0
+  },
+  "ipc_priority": [
+    "HDX IPC",
+    "FEWS NET",
+    "GRFC"
+  ],
+  "base_weights": {
+    "IPC": 0.6,
+    "FAO_ASAP_block": 0.2,
+    "SOFI": 0.2
+  },
+  "availability_rules": {
+    "IPC_FEWSNET_GRFC": "Only positive values from 1 to 5 receive weight.",
+    "FAO_ASAP": "Only positive values 1 or 2 receive weight. Zero is preserved as source evidence but excluded from weighting.",
+    "SOFI": "Only positive values up to 100 receive weight. Zero, blank, and missing values are excluded.",
+    "no_evidence": "A country with no usable Food Security evidence receives a score of zero."
+  },
+  "shock_block_method": "FAO and ASAP share the 20 percent block equally when both receive weight. One source receives the full block when the other is unavailable.",
+  "source_files": {
+    "ipc": "hdx_ipc_update_comparison.csv",
+    "fewsnet": "fewsnet_faob_current.csv",
+    "grfc": "grfc_current.csv",
+    "fao": "fao_crop_prospects_current.csv",
+    "asap": "asap_hotspots_current.csv",
+    "sofi": "sofi_current.csv"
+  },
+  "ipc_overrides": {
+    "YEM": {
+      "score": 5.0,
+      "reason": "CERF manual adjustment reflecting the likely prevalence of IPC Phase 5 in DFA-controlled areas where current IPC analysis was unavailable."
+    }
+  },
+  "countries_consolidated": 150,
+  "countries_with_usable_evidence": 111,
+  "countries_without_usable_evidence": 39
+}

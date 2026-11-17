@@ -599,6 +599,624 @@ def _remove_grfc_period_from_export(payload):
         for name, content in parts.items():archive.writestr(name, content)
     return output.getvalue()
 
+
+def _original_sheet_xml(parts, sheets, rels, name):
+ node = next(
+  (x for x in sheets if x.get("name") == name),
+  None
+ )
+ if node is None:
+  return None, None
+
+ rid = node.get(f"{{{REL}}}id")
+
+ target = next(
+  x.get("Target")
+  for x in rels
+  if x.get("Id") == rid
+ )
+
+ part = (
+  target.lstrip("/")
+  if target.startswith("/")
+  else posixpath.normpath("xl/" + target)
+ )
+
+ return part, ET.fromstring(parts[part])
+
+
+def _set_template_cell(row, col, value):
+ coord = f'{get_column_letter(col)}{row.get("r")}'
+
+ old = next(
+  (x for x in row if x.get("r") == coord),
+  None
+ )
+
+ style = old.get("s") if old is not None else None
+
+ if old is not None:
+  row.remove(old)
+
+ xml_cell(row, coord, value, style)
+
+ row[:] = sorted(
+  row,
+  key=lambda x: (
+   len(re.match("[A-Z]+", x.get("r")).group()),
+   re.match("[A-Z]+", x.get("r")).group()
+  )
+ )
+
+
+def _update_original_funding_sheet(parts, sheets, rels):
+ base = (
+  Path(__file__).resolve().parent
+  / "data"
+  / "processed"
+ )
+
+ path = base / "fts_funding_detailed.csv"
+
+ if not path.exists():
+  raise RuntimeError(
+   "FTS funding data missing. "
+   "Run the FTS collector and processor before export."
+  )
+
+ df = pd.read_csv(path)
+
+ required = [
+  "year",
+  "plan_name",
+  "plan_type",
+  "requirements_usd",
+  "funded_usd",
+  "retrieved_at_utc"
+ ]
+
+ missing = [c for c in required if c not in df.columns]
+
+ if missing:
+  raise RuntimeError(
+   "Missing FTS columns: " + ", ".join(missing)
+  )
+
+ df = df.sort_values(
+  ["year", "plan_name"],
+  na_position="last"
+ )
+
+ dates = pd.to_datetime(
+  df["retrieved_at_utc"],
+  utc=True,
+  errors="coerce"
+ ).dropna()
+
+ if dates.empty:
+  raise RuntimeError(
+   "Invalid FTS collection timestamp."
+  )
+
+ date = dates.max()
+
+ oldname = next(
+  (
+   x.get("name")
+   for x in sheets
+   if x.get("name", "").startswith("Funding ")
+   and x.get("name") != "Funding Country Current"
+  ),
+  None
+ )
+
+ if oldname is None:
+  raise RuntimeError(
+   "Original Funding worksheet missing."
+  )
+
+ part, tree = _original_sheet_xml(
+  parts, sheets, rels, oldname
+ )
+
+ sd = tree.find(f"{{{NS}}}sheetData")
+
+ rows = {
+  int(r.get("r")): r
+  for r in sd
+ }
+
+ def row_at(n):
+  if n not in rows:
+   r = ET.Element(
+    f"{{{NS}}}row",
+    {"r": str(n)}
+   )
+   sd.append(r)
+   rows[n] = r
+
+  return rows[n]
+
+ _set_template_cell(
+  row_at(1), 1,
+  "GHO Funding Coverage | 2025 and 2026"
+ )
+
+ _set_template_cell(
+  row_at(2), 1,
+  date.strftime("%Y-%m-%d")
+ )
+
+ headers = [
+  "Coordinated plan*",
+  "Coordinated plan type",
+  "Required (US$)",
+  "Funded (US$)",
+  "Coverage (%)"
+ ]
+
+ for col, value in enumerate(headers, 1):
+  _set_template_cell(row_at(3), col, value)
+
+ for i, rec in enumerate(df.itertuples(index=False), 4):
+
+  label = str(rec.plan_name)
+
+  scope = str(getattr(rec, "plan_scope", ""))
+
+  if scope == "Multi-country regional plan":
+   label += " [Multi-country regional plan]"
+
+  elif scope == "Global plan":
+   label += " [Global plan]"
+
+  req = pd.to_numeric(
+   rec.requirements_usd,
+   errors="coerce"
+  )
+
+  funded = pd.to_numeric(
+   rec.funded_usd,
+   errors="coerce"
+  )
+
+  coverage = (
+   funded / req
+   if pd.notna(req)
+   and req > 0
+   and pd.notna(funded)
+   else None
+  )
+
+  values = [
+   label,
+   str(rec.plan_type or ""),
+   req,
+   funded,
+   coverage
+  ]
+
+  for col, value in enumerate(values, 1):
+   _set_template_cell(
+    row_at(i), col, value
+   )
+
+  # Extend original row styling.
+  if i > 38:
+   template = rows.get(20)
+
+   for cell in rows[i]:
+    if cell.get("s") is not None:
+     continue
+
+    if template is None:
+     continue
+
+    column = re.match(
+     "[A-Z]+",
+     cell.get("r")
+    ).group()
+
+    ref = next(
+     (
+      c for c in template
+      if re.match(
+       "[A-Z]+",
+       c.get("r")
+      ).group() == column
+     ),
+     None
+    )
+
+    if ref is not None and ref.get("s"):
+     cell.set("s", ref.get("s"))
+
+ last = 3 + len(df)
+
+ for n, row in list(rows.items()):
+  if n > last:
+   for cell in list(row):
+    if cell.tag == f"{{{NS}}}c":
+     row.remove(cell)
+
+ _set_template_cell(
+  row_at(last + 2),
+  1,
+  "* FTS data collected "
+  + date.strftime("%d %b %Y")
+  + " UTC. Regional and global plans are "
+  + "not allocated to individual countries."
+ )
+
+ sd[:] = sorted(
+  sd,
+  key=lambda r: int(r.get("r", "0"))
+ )
+
+ autof = tree.find(f"{{{NS}}}autoFilter")
+
+ if autof is not None:
+  autof.set("ref", f"A3:E{last}")
+
+ parts[part] = ET.tostring(
+  tree,
+  encoding="utf-8",
+  xml_declaration=True
+ )
+
+ newname = "Funding " + date.strftime("%d%b%Y")
+
+ next(
+  x for x in sheets
+  if x.get("name") == oldname
+ ).set("name", newname)
+
+
+def _update_original_source_sheets(
+ parts, sheets, rels, sources, data
+):
+
+ mappings = {
+  "Food Security": {
+   "fewsnet_value": 2,
+   "grfc_value": 3,
+   "fao_value": 6,
+   "FAO_Category": 7,
+   "sofi_value": 8,
+   "asap_value": 9,
+   "ipc_value": 10
+  },
+  "ASAP Hotspots": {
+   "fao_value": 2,
+   "FAO_Category": 3,
+   "asap_value": 4,
+   "ipc_value": 5,
+   "fewsnet_value": 6,
+   "grfc_value": 7,
+   "sofi_value": 8
+  }
+ }
+
+ name_to_iso = {
+  str(name).strip(): str(iso).strip()
+  for iso, name in zip(data[2], data[1])
+ }
+
+ frame = sources.get("food")
+
+ if frame is None:
+  return
+
+ for name, columns in mappings.items():
+
+  part, tree = _original_sheet_xml(
+   parts, sheets, rels, name
+  )
+
+  if tree is None:
+   continue
+
+  sd = tree.find(f"{{{NS}}}sheetData")
+
+  first = 3 if name == "Food Security" else 2
+
+  for row in sd:
+
+   n = int(row.get("r"))
+
+   if n < first:
+    continue
+
+   country = _TEMPLATE_COUNTRIES.get(
+    (name, n)
+   )
+
+   iso = name_to_iso.get(
+    str(country).strip()
+   )
+
+   if not iso or iso not in frame.index:
+    continue
+
+   for field, col in columns.items():
+
+    if field not in frame.columns:
+     continue
+
+    value = frame.at[iso, field]
+
+    _set_template_cell(
+     row,
+     col,
+     value if pd.notna(value) else None
+    )
+
+  parts[part] = ET.tostring(
+   tree,
+   encoding="utf-8",
+   xml_declaration=True
+  )
+
+
+_TEMPLATE_COUNTRIES = {}
+
+
+def _rename_dated_source_sheets(parts, sheets):
+ import pandas as pd
+ import re
+ from pathlib import Path
+ from datetime import datetime
+
+ root = Path(__file__).resolve().parent
+
+ def latest_date(filename, columns):
+  file = root / filename
+
+  if not file.exists():
+   return None
+
+  df = pd.read_csv(file)
+
+  for column in columns:
+   if column not in df.columns:
+    continue
+
+   values = pd.to_datetime(
+    df[column],
+    errors="coerce",
+    utc=True
+   ).dropna()
+
+   if not values.empty:
+    return values.max().to_pydatetime()
+
+  return None
+
+ def source_file_date(filename):
+  file = root / filename
+
+  if not file.exists():
+   return None
+
+  df = pd.read_csv(file)
+
+  if "Source_File" not in df.columns:
+   return None
+
+
+  # Recognize INFORM Risk mid-year releases.
+  for filename in df["Source_File"].dropna().astype(str):
+   match = re.search(
+    r"Mid[_ -]*(20\d{2})",
+    filename,
+    re.IGNORECASE
+   )
+
+   if match:
+    return datetime(int(match.group(1)), 6, 1)
+
+  for value in df["Source_File"].dropna().unique():
+
+   name = str(value)
+
+   # INFORM Risk mid-year releases.
+   mid = re.search(
+    r"Mid[_ -]*(20\\d{2})",
+    name,
+    re.IGNORECASE
+   )
+
+   if mid:
+    return datetime(int(mid.group(1)), 6, 1)
+
+   # YYYY-MM-DD or YYYY_MM_DD
+   match = re.search(
+    r"(20\d{2})[-_](\d{1,2})[-_](\d{1,2})",
+    name
+   )
+
+   if match:
+    try:
+     return datetime(
+      int(match.group(1)),
+      int(match.group(2)),
+      int(match.group(3))
+     )
+    except ValueError:
+     pass
+
+   # YYYYMMDD
+   match = re.search(
+    r"(20\d{2})(\d{2})(\d{2})",
+    name
+   )
+
+   if match:
+    try:
+     return datetime.strptime(
+      match.group(0), "%Y%m%d"
+     )
+    except ValueError:
+     pass
+
+   # Month YYYY
+   match = re.search(
+    r"(January|February|March|April|May|June|July|"
+    r"August|September|October|November|December)"
+    r"[_ -]*(20\d{2})",
+    name,
+    re.IGNORECASE
+   )
+
+   if match:
+    try:
+     return datetime.strptime(
+      match.group(1) + " " + match.group(2),
+      "%B %Y"
+     )
+    except ValueError:
+     pass
+
+  return None
+
+ # Actual reporting dates from collector outputs.
+ dates = {
+  "ACLED Trends": latest_date(
+   "acled_trends_current.csv",
+   [
+    "ACLED_Trends_Latest_Update",
+    "ACLED_Trends_Period_End"
+   ]
+  ),
+
+  "ACLED WCI": latest_date(
+   "acled_wci_current.csv",
+   ["ACLED_WCI_Refresh_Date"]
+  ),
+
+  "INFORM Severity": source_file_date(
+   "inform_severity_current.csv"
+  ),
+
+  "INFORM Risk": source_file_date(
+   "inform_risk_current.csv"
+  )
+ }
+
+ replacements = {}
+
+ for prefix, date in dates.items():
+
+  if date is None:
+   print(
+    "Date unavailable; worksheet name unchanged:",
+    prefix
+   )
+   continue
+
+  if prefix == "INFORM Severity":
+   new_name = (
+    "INFORM Severity "
+    + date.strftime("%b %Y")
+   )
+
+  elif prefix == "INFORM Risk":
+   new_name = (
+    "INFORM Risk Mid"
+    + date.strftime("%Y")
+   )
+  else:
+   new_name = (
+    prefix + " "
+    + date.strftime("%d%b%Y")
+   )
+
+  matches = [
+   node
+   for node in sheets
+   if node.get("name", "").startswith(prefix + " ")
+  ]
+
+  # Historical INFORM Severity releases must remain unchanged.
+  if prefix == "INFORM Severity":
+   matches = [
+    node for node in matches
+    if "Dec 24" not in node.get("name", "")
+    and "May 25" not in node.get("name", "")
+   ]
+
+  if not matches:
+   continue
+
+  if len(matches) != 1:
+   raise RuntimeError(
+    "Ambiguous worksheet selection: " + prefix
+   )
+
+  node = matches[0]
+  old_name = node.get("name")
+
+  if old_name == new_name:
+   continue
+
+  existing_names = {
+   s.get("name")
+   for s in sheets
+  }
+
+  if new_name in existing_names:
+   raise RuntimeError(
+    "Worksheet name already exists: " + new_name
+   )
+
+  node.set("name", new_name)
+
+  replacements[old_name] = new_name
+
+  print(
+   "Worksheet renamed:",
+   old_name,
+   "->",
+   new_name
+  )
+
+ # Update references throughout Excel XML parts.
+ # This includes worksheet formulas, defined names,
+ # chart formulas and other quoted sheet references.
+ for part_name, content in list(parts.items()):
+
+  if not part_name.endswith(".xml"):
+   continue
+
+  if part_name == "xl/workbook.xml":
+   continue
+
+  if not (
+   part_name.startswith("xl/worksheets/")
+   or part_name.startswith("xl/charts/")
+   or part_name.startswith("xl/tables/")
+  ):
+   continue
+
+  for old_name, new_name in replacements.items():
+
+   old_ref = (
+    "'" + old_name + "'!"
+   ).encode("utf-8")
+
+   new_ref = (
+    "'" + new_name + "'!"
+   ).encode("utf-8")
+
+   content = content.replace(
+    old_ref,
+    new_ref
+   )
+
+  parts[part_name] = content
+
+ return replacements
+
 def export_xlsx(path,rows,data,sources,status):
  # Edit XML parts in place, preserving all original styles, drawings, conditional formatting and sheets.
  with zipfile.ZipFile(path) as z:parts={name:z.read(name) for name in z.namelist()}
@@ -662,19 +1280,38 @@ def export_xlsx(path,rows,data,sources,status):
    xml_cell(row,coord,country_scores[country],style,formula)
    row[:]=sorted(row,key=lambda c:(len(re.match('[A-Z]+',c.get('r')).group()),re.match('[A-Z]+',c.get('r')).group()))
   parts[dep_path]=ET.tostring(dep,encoding='utf-8',xml_declaration=True)
- # Original source sheets remain as August reference; current sheets are explicit and contain full audited schemas.
- datasets={f'Current {k}':v.reset_index(drop=True) for k,v in sources.items()}
- datasets['Source status']=status
- datasets['Export scope']=pd.DataFrame({'note':['Original source/reference sheets retained from August workbook.','Current source sheets contain local collector/processor outputs.','All Data and its cached calculations are current.','Historical funding/apportionment sheets are not refreshed; pre-existing funding #REF errors are retained.','GRFC time-period column removed from exported All Data.']})
- existing={s.get('name') for s in sheets};sid=max(int(s.get('sheetId')) for s in sheets)
- for name,df in datasets.items():
-  name=name[:31]
-  if name in existing:continue
-  sid+=1;newrid=f'cirvCurrent{sid}';part=f'xl/worksheets/cirv_current_{sid}.xml'
-  ET.SubElement(sheets,f'{{{NS}}}sheet',{'name':name,'sheetId':str(sid),f'{{{REL}}}id':newrid})
-  ET.SubElement(rels,f'{{{PKG}}}Relationship',{'Id':newrid,'Type':REL+'/worksheet','Target':part[3:]})
-  ET.SubElement(types,f'{{{CT}}}Override',{'PartName':'/'+part,'ContentType':'application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml'})
-  parts[part]=source_xml(df)
+
+ # OCHA_CERF_REDESIGN_V1
+ # Update original worksheets, not duplicate Current sheets.
+ global _TEMPLATE_COUNTRIES
+ _TEMPLATE_COUNTRIES = {
+  (name, n): cached[name].cell(n, 1).value
+  for name in ("Food Security", "ASAP Hotspots")
+  if name in cached
+  for n in range(2, cached[name].max_row + 1)
+ }
+ _update_original_source_sheets(
+  parts, sheets, rels, sources, data
+ )
+ _update_original_funding_sheet(
+  parts, sheets, rels
+ )
+
+ # Dynamically rename current source worksheets.
+ renamed_sheets = _rename_dated_source_sheets(
+  parts, sheets
+ )
+
+ # Update defined-name references in workbook XML.
+ for defined_name in workbook.iter():
+  if defined_name.tag.endswith("}definedName"):
+   if defined_name.text:
+    for old_name, new_name in renamed_sheets.items():
+     defined_name.text = defined_name.text.replace(
+      "'" + old_name + "'!",
+      "'" + new_name + "'!"
+     )
+
  parts['xl/workbook.xml']=ET.tostring(workbook,encoding='utf-8',xml_declaration=True)
  parts['xl/_rels/workbook.xml.rels']=ET.tostring(rels,encoding='utf-8',xml_declaration=True)
  parts['[Content_Types].xml']=ET.tostring(types,encoding='utf-8',xml_declaration=True)
@@ -701,6 +1338,7 @@ def colour(cell,wb):
 
 
 def table_html(wb, headers, data):
+    import re
     """Display CIRV using the reference workbook's formatting."""
     from openpyxl.styles.colors import COLOR_INDEX
     from openpyxl.utils import get_column_letter
@@ -921,6 +1559,15 @@ def table_html(wb, headers, data):
     parts.append("</tr></thead><tbody>")
 
     def value_text(value, cell):
+
+        # IASC Early Warning Score (column J).
+        # Always display whole numbers.
+        if cell.column == 10:
+            try:
+                if value is not None and str(value).strip() != "":
+                    return str(round(float(value)))
+            except (ValueError, TypeError):
+                pass
         if value is None or pd.isna(value):
             return ""
 
@@ -946,6 +1593,12 @@ def table_html(wb, headers, data):
             if "0" in fmt and fmt != "General":
                 return f"{float(value):,.0f}"
 
+            # IASC Early Warning Score: display whole numbers only.
+            if cell.column == 10 and isinstance(
+                value, (int, float, np.integer, np.floating)
+            ):
+                return f"{float(value):.0f}"
+
             if isinstance(value, (float, np.floating)):
                 return f"{float(value):.2f}"
 
@@ -969,16 +1622,65 @@ def table_html(wb, headers, data):
             cell = ws.cell(refrow, col)
             value = html.escape(value_text(row[col], cell))
 
-            sticky = (
-                "position:sticky;left:0;z-index:3;"
-                if col == 1
-                else ""
-            )
+            # Freeze Country and ISO3 columns.
+            if col == 1:
+                sticky = (
+                    "position:sticky;"
+                    "left:0;"
+                    "z-index:4;"
+                    "min-width:180px;"
+                    "width:180px;"
+                )
+
+            elif col == 2:
+                sticky = (
+                    "position:sticky;"
+                    "left:180px;"
+                    "z-index:4;"
+                    "min-width:90px;"
+                    "width:90px;"
+                )
+
+            else:
+                sticky = ""
+
+            # Uniform IASC Early Warning Score formatting.
+            iasc_style = (
+                "font-size:12px !important;"
+                "font-weight:400 !important;"
+                "text-align:center !important;"
+                "vertical-align:middle !important;"
+                "font-family:Arial,sans-serif !important;"
+            ) if col == 10 else ""
+
+            if col == 10:
+                try:
+                    numeric = float(row[col])
+                    if numeric == numeric:
+                        value = str(round(numeric))
+                except (ValueError, TypeError):
+                    pass
+
+            # Consistent IASC Early Warning Score formatting.
+            if col == 10:
+                try:
+                    numeric = float(row[col])
+                    if numeric == numeric:
+                        value = str(round(numeric))
+                except (ValueError, TypeError):
+                    pass
+
+            iasc_override = (
+                "text-align:center !important;"
+                "vertical-align:middle !important;"
+                "font-size:12px !important;"
+                "font-weight:400 !important;"
+            ) if col == 10 else ""
 
             parts.append(
-                f'<td style="{css(cell)};height:25px;'
+                f'<td style="{css(cell)};{iasc_override}height:25px;'
                 f'padding:3px 6px;white-space:normal;'
-                f'overflow-wrap:anywhere;{sticky}">'
+                f'overflow-wrap:anywhere;text-align:center !important;vertical-align:middle !important;{sticky}{iasc_style}">'
                 f'{value}</td>'
             )
 
@@ -986,7 +1688,127 @@ def table_html(wb, headers, data):
 
     parts.append("</tbody></table></div>")
 
-    return "".join(parts)
+    result = "".join(parts)
+
+    # CIRV_SINGLE_FREEZE_IMPLEMENTATION
+    # Preserve workbook formatting, but remove conflicting sticky rules.
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(result, "html.parser")
+    table = soup.find("table")
+    if table is None:
+        return result
+
+    def set_styles(element, updates, remove=()):
+        declarations = []
+        removed = set(remove) | set(updates)
+        for declaration in element.get("style", "").split(";"):
+            if ":" not in declaration:
+                continue
+            key, value = declaration.split(":", 1)
+            if key.strip().lower() not in removed:
+                declarations.append(
+                    key.strip() + ":" + value.strip()
+                )
+        declarations.extend(
+            key + ":" + str(value)
+            for key, value in updates.items()
+        )
+        element["style"] = ";".join(declarations) + ";"
+
+    total_width = sum(widths[col] for col in visible)
+
+    # Match the whole page to the table, plus page padding.
+    import streamlit as st
+
+    page_width = total_width + 2 + 32
+    st.markdown(
+        "<style>"
+        ".block-container {"
+        f"width:100% !important;max-width:{page_width}px !important;"
+        "box-sizing:border-box !important;"
+        "margin-left:auto !important;margin-right:auto !important;"
+        "padding-left:16px !important;padding-right:16px !important;"
+        "}"
+        "</style>",
+        unsafe_allow_html=True,
+    )
+
+
+    set_styles(table, {
+        "width": str(total_width) + "px",
+        "min-width": str(total_width) + "px",
+        "table-layout": "fixed",
+        "border-collapse": "separate",
+        "border-spacing": "0",
+        "overflow": "visible",
+    })
+
+    container = table.parent
+    set_styles(container, {
+        "margin-left": "auto",
+        "margin-right": "auto",
+        "position": "relative",
+        "overflow": "auto",
+        "max-height": "72vh",
+        "width": str(total_width + 2) + "px",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "isolation": "isolate",
+    })
+
+    # The entire thead contains workbook rows 1, 2 and 3.
+    # Freezing it as one block avoids inaccurate row-height offsets.
+    thead = table.find("thead")
+    if thead is not None:
+        set_styles(thead, {
+            "position": "sticky",
+            "top": "0",
+            "z-index": "30",
+            "background-color": "#FFFFFF",
+        })
+
+    offsets = {}
+    offset = 0
+    for col in visible:
+        offsets[col] = offset
+        offset += widths[col]
+
+    for tr in table.find_all("tr"):
+        is_header = tr.find_parent("thead") is not None
+        position = 0
+
+        for cell in tr.find_all(["th", "td"], recursive=False):
+            span = int(cell.get("colspan", 1))
+            covered = visible[position:position + span]
+            position += span
+
+            set_styles(
+                cell,
+                {
+                    "box-sizing": "border-box",
+                    "position": "relative",
+                },
+                remove=(
+                    "top", "left", "right", "bottom", "z-index",
+                    "width", "min-width", "max-width",
+                ),
+            )
+
+            # Do not horizontally freeze merged headings that extend
+            # beyond Country and ISO3.
+            if covered and all(col in (1, 2) for col in covered):
+                cell_width = sum(widths[col] for col in covered)
+                set_styles(cell, {
+                    "position": "sticky",
+                    "left": str(offsets[covered[0]]) + "px",
+                    "z-index": "40" if is_header else "10",
+                    "width": str(cell_width) + "px",
+                    "min-width": str(cell_width) + "px",
+                    "max-width": str(cell_width) + "px",
+                })
+
+    return str(soup)
 
 
 
@@ -1009,23 +1831,86 @@ def render_fts_scatterplots(cirv_data):
  funding = pd.read_csv(funding_path)
  annual = pd.read_csv(annual_path)
 
- # Default to HNRP plans only.
- show_all = st.toggle(
-  "Include all coordinated plans",
-  value=False,
-  help="Off: HNRP countries only. On: all eligible coordinated plans."
+ # Reporting years follow the refreshed annual dataset.
+ required = {"year", "plan_type", "iso3"}
+ missing = required.difference(annual.columns)
+ if missing:
+  st.error("FTS annual data missing: " + ", ".join(sorted(missing)))
+  return
+
+ available_years = pd.to_numeric(annual["year"], errors="coerce")
+ available_years = available_years.dropna()
+ available_years = available_years[
+  available_years.eq(available_years.round())
+ ]
+ if available_years.empty:
+  st.error("FTS annual data contains no valid reporting years.")
+  return
+
+ current_year = int(available_years.max())
+ previous_year = current_year - 1
+
+ combined_coverage_col = f"coverage_{previous_year}_{current_year}"
+ current_coverage_col = f"coverage_{current_year}_plan"
+ total_coverage_col = f"coverage_{current_year}_total"
+ current_requirements_col = f"requirements_usd_{current_year}"
+ current_funded_col = f"funded_usd_{current_year}"
+ total_funded_col = f"total_funded_usd_{current_year}"
+
+ # Never relabel old funding columns as a newer reporting year.
+ required_funding = {
+  "iso3", "country",
+  combined_coverage_col,
+  current_coverage_col,
+  total_coverage_col,
+  current_requirements_col,
+  current_funded_col,
+  total_funded_col,
+  "requirements_combined",
+  "funded_combined"
+ }
+ missing_funding = required_funding.difference(funding.columns)
+ if missing_funding:
+  st.error(
+   f"Annual plan data has advanced to {current_year}, but the "
+   "combined funding dataset is missing the matching columns: "
+   + ", ".join(sorted(missing_funding))
+   + ". Refresh the funding collectors and processors together."
+  )
+  return
+
+ funding["iso3"] = (
+  funding["iso3"].astype(str).str.strip().str.upper()
  )
 
- if not show_all:
-  hnrp = annual[
-   annual["plan_type"]
-   .fillna("")
-   .str.lower()
-   .str.contains("humanitarian needs and response plan|humanitarian response plan")
-  ]
+ # HNRP defaults remain specific to each comparison.
+ years = pd.to_numeric(annual["year"], errors="coerce")
+ plan_types = (
+  annual["plan_type"].fillna("").astype(str)
+  .str.strip().str.lower()
+ )
+ hnrp_types = {
+  "humanitarian needs and response plan",
+  "humanitarian response plan",
+  "hnrp",
+  "hrp"
+ }
+ is_hnrp = plan_types.isin(hnrp_types)
 
-  eligible_iso = set(hnrp["iso3"])
-  funding = funding[funding["iso3"].isin(eligible_iso)]
+ annual_iso = (
+  annual["iso3"].fillna("").astype(str)
+  .str.strip().str.upper()
+ )
+
+ def eligible_hnrp_iso(year_mask):
+  return set(annual_iso.loc[is_hnrp & year_mask]) - {""}
+
+ hnrp_iso_combined = eligible_hnrp_iso(
+  years.isin([previous_year, current_year])
+ )
+ hnrp_iso_current = eligible_hnrp_iso(
+  years.eq(current_year)
+ )
 
  cirv = pd.DataFrame({
   "iso3": cirv_data[2].astype(str).str.strip().str.upper(),
@@ -1052,22 +1937,22 @@ def render_fts_scatterplots(cirv_data):
 
  charts = [
   (
-   "2025 + 2026 Coordinated Plans",
-   "coverage_2025_2026",
+   f"{previous_year} + {current_year} Coordinated Plans",
+   combined_coverage_col,
    "requirements_combined",
    "funded_combined"
   ),
   (
-   "2026 Coordinated Plans",
-   "coverage_2026_plan",
-   "requirements_usd_2026",
-   "funded_usd_2026"
+   f"{current_year} Coordinated Plans",
+   current_coverage_col,
+   current_requirements_col,
+   current_funded_col
   ),
   (
-   "2026 Total Funding",
-   "coverage_2026_total",
-   "requirements_usd_2026",
-   "total_funded_usd_2026"
+   f"{current_year} Total Funding",
+   total_coverage_col,
+   current_requirements_col,
+   total_funded_col
   )
  ]
 
@@ -1078,9 +1963,87 @@ def render_fts_scatterplots(cirv_data):
   plot = merged[
    ["country", "iso3", "cirv_score", coverage_col, req_col, funded_col]
   ].copy()
+  
+  # Validate comparable data before building the exception list.
+  for column in ["cirv_score", coverage_col, req_col, funded_col]:
+   plot[column] = pd.to_numeric(plot[column], errors="coerce")
 
-  plot = plot.dropna()
-  plot = plot[plot[req_col] > 0]
+  plot = plot.replace([np.inf, -np.inf], np.nan).dropna()
+  plot = plot.loc[plot[req_col] > 0].copy()
+
+  # Each country receives one point and one equal-weight contribution.
+  if plot["iso3"].duplicated().any():
+   st.error("Duplicate country funding rows found; refresh the processor.")
+   continue
+
+  eligible_iso = (
+   hnrp_iso_combined
+   if coverage_col == combined_coverage_col
+   else hnrp_iso_current
+  )
+  relevant_years = (
+   years.isin([previous_year, current_year])
+   if coverage_col == combined_coverage_col
+   else years.eq(current_year)
+  )
+  coordinated_iso = set(annual_iso.loc[relevant_years]) - {""}
+
+  exceptions = plot.loc[
+   ~plot["iso3"].isin(eligible_iso)
+   & plot["iso3"].isin(coordinated_iso)
+  ].sort_values("country")
+
+  selected_iso = set()
+
+  with st.expander("Include additional non-HNRP countries/plans", expanded=False):
+   st.caption(
+    "Selections apply only to this graph. They do not reclassify "
+    "flash appeals or other plans as HNRPs or full-year plans. "
+    "Values use the existing country-level funding dataset."
+   )
+
+   if exceptions.empty:
+    st.caption("No additional countries with comparable data.")
+   else:
+    for _, candidate in exceptions.iterrows():
+     iso = candidate["iso3"]
+     country_plans = annual.loc[
+      relevant_years & annual_iso.eq(iso)
+     ].copy()
+
+     # Include plan names when the annual dataset provides them.
+     name_column = next(
+      (
+       column for column in ["plan_name", "plan_title", "name"]
+       if column in country_plans.columns
+      ),
+      None
+     )
+     details = []
+     for _, plan in country_plans.iterrows():
+      year_value = pd.to_numeric(plan["year"], errors="coerce")
+      year_label = str(int(year_value))
+      description = str(plan["plan_type"]).strip()
+      if name_column and pd.notna(plan[name_column]):
+       description = str(plan[name_column]).strip()
+      detail = year_label + ": " + description
+      if detail not in details:
+       details.append(detail)
+
+     label = candidate["country"] + " (" + iso + ")"
+     if details:
+      label += " | " + "; ".join(details)
+
+     if st.checkbox(
+      label,
+      value=False,
+      key="fts_exception_" + coverage_col + "_" + iso
+     ):
+      selected_iso.add(iso)
+
+  plot = plot.loc[
+   plot["iso3"].isin(eligible_iso | selected_iso)
+  ].copy()
 
   if plot.empty:
    st.warning("No eligible countries for this comparison.")
@@ -1109,9 +2072,17 @@ def render_fts_scatterplots(cirv_data):
 
   show_full_axis = st.toggle(
    "Show full X-axis including extreme values",
-   value=False,
+   value=True,
    key="full_axis_" + coverage_col
   )
+
+  # Cropped-axis mode removes extreme points from the displayed
+  # dataset as well as its averages and downloadable chart data.
+  if not show_full_axis and not regular.empty:
+   plot = regular.copy()
+
+  maximum = plot[req_col].max()
+  sizeref = 2 * maximum / (75 ** 2)
 
   fig = go.Figure()
 
@@ -1160,8 +2131,7 @@ def render_fts_scatterplots(cirv_data):
    line_width=2
   )
 
-  # Keep all observations and averages unchanged.
-  # Only adjust the visible X-axis range.
+  # Averages and plotted points use the same displayed dataset.
   if not show_full_axis and not regular.empty:
    axis_max = max(
     100.0,
@@ -1224,9 +2194,11 @@ def render_fts_scatterplots(cirv_data):
    unsafe_allow_html=True
   )
 
-  if not outliers.empty:
+  if not show_full_axis and not regular.empty and not outliers.empty:
 
-   st.markdown("**Extreme funding coverage values:**")
+   st.markdown(
+    "**Extreme countries omitted from this view and its averages:**"
+   )
 
    for _, row in outliers.sort_values(
     "coverage_pct",
@@ -1237,7 +2209,8 @@ def render_fts_scatterplots(cirv_data):
      f"* **{row['country']}**: "
      f"{row['coverage_pct']:.1f}% funding coverage; "
      f"CIRV {row['cirv_score']:.1f}. "
-     "Outside the default X-axis range."
+     "Enable the full X-axis to include this country and "
+     "recalculate both averages."
     )
 
   st.download_button(
@@ -1249,24 +2222,104 @@ def render_fts_scatterplots(cirv_data):
   )
 
 
+
+def _ocha_theme():
+ import streamlit as st
+
+ st.markdown("""
+ <style>
+ :root {
+  --ocha: #009EDB;
+  --navy: #163A59;
+  --mist: #F4F8FB;
+ }
+
+ .stApp {
+  background: var(--mist);
+  color: #19334A;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .block-container {
+  max-width: 1600px;
+  padding-top: 1.2rem;
+  padding-bottom: 3rem;
+ }
+
+ h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #163A59;
+  letter-spacing: -0.025em;
+ }
+
+ h1 {
+  font-size: 2.2rem !important;
+  font-weight: 750 !important;
+  border-left: 7px solid #009EDB;
+  padding-left: 18px;
+ }
+
+ h2 {
+  border-bottom: 2px solid #B7E6F5;
+  padding-bottom: 12px;
+  margin-top: 35px !important;
+ }
+
+ .stButton > button,
+ .stDownloadButton > button {
+  background: #0072BC;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 650;
+  padding: 10px 20px;
+ }
+
+ .stButton > button:hover,
+ .stDownloadButton > button:hover {
+  background: #005B95;
+  color: white;
+ }
+
+ div[data-testid="stTextInput"] input {
+  border: 1px solid #B6CDD9;
+  border-radius: 5px;
+ }
+
+ div[data-testid="stCaptionContainer"] {
+  font-size: 14px;
+  color: #4C6475;
+ }
+ </style>
+ """, unsafe_allow_html=True)
+
+
+# CIRV_FREEZE_COMPLETE_HEADER_BLOCK
+
+
+
+
+# CIRV_FREEZE_HEADERS_AND_TWO_COLUMNS
+
+
+
 def main():
  import streamlit as st
- st.set_page_config(page_title='CERF CIRV',layout='wide',page_icon=get_page_icon());st.title('CERF CIRV | All Data')
+ st.set_page_config(page_title='CERF CIRV',layout='wide',page_icon=get_page_icon());_ocha_theme();st.title('CERF | CIRV All Data')
  try:path=reference();wb,rows,headers,data,sources,status,errors=assemble(path,root=refresh_controls())
  except Exception as exc:st.error(str(exc));st.stop()
- with st.expander('Every collector and processor output',expanded=bool(errors)):st.dataframe(status,hide_index=True,use_container_width=True)
+ st.caption('Source health: '+str(int((status['status']=='LOADED').sum()))+' of '+str(len(status))+' datasets loaded')
  for error in errors:st.error(error)
- st.caption('Live local outputs only. No historical workbook data substituted for missing current sources.')
+ st.caption('UN OCHA | Central Emergency Response Fund | Country risk and vulnerability analysis | Latest successfully processed source data')
  q=st.text_input('Filter country / ISO3')
  view=data[data[1].astype(str).str.contains(q,case=False,regex=False)|data[2].str.contains(q,case=False,regex=False)] if q else data
  st.markdown(table_html(wb,headers,view),unsafe_allow_html=True)
  render_fts_scatterplots(view)
- for key,df in sources.items():
-  with st.expander('Source sheet: '+key):st.dataframe(df.reset_index(drop=True),hide_index=True,use_container_width=True)
+
  if errors:st.warning('Complete export blocked until required source errors are resolved. Source sheets remain available for inspection.')
  else:
   flat=data[VISIBLE].rename(columns=headers)
   st.download_button('Download All Data CSV',flat.to_csv(index=False).encode('utf-8-sig'),'CERF_CIRV_All_Data_Current.csv','text/csv')
-  st.download_button('Download workbook + every current source sheet',export_xlsx(path,rows,data,sources,status),'CERF_CIRV_Current.xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+  st.download_button('Download CIRV workbook',export_xlsx(path,rows,data,sources,status),'CERF_CIRV_Current.xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__=='__main__':main()

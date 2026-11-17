@@ -1,0 +1,77 @@
+﻿ISO3,Source_Label,IASC_Early_Warning_Impact_Level,IASC_Early_Warning_Likelihood_Level,IASC_Early_Warning_Matrix_Level,IASC_Early_Warning_Seriousness,IASC_Early_Warning_Type,IASC_Early_Warning_Score,IASC_Scoring_Method,IASC_Source_Section,IASC_PDF_Page,IASC_Rating_Evidence,IASC_Source_File
+YEM,Yemen,5,5,5,Very High,,100.0,Embedded badge image gauge geometry + Impact x Likelihood matrix,Risks of High Concern,3,Embedded image xref=36; likelihood arc aspect=1.798->level 5; impact arc aspect=1.988->level 5,2026 Inter-Agency Early Warning Brief 26102026.pdf
+SSD,South Sudan,5,5,5,Very High,,100.0,Embedded badge image gauge geometry + Impact x Likelihood matrix,Risks of High Concern,4,Embedded image xref=39; likelihood arc aspect=1.806->level 5; impact arc aspect=1.980->level 5,2026 Inter-Agency Early Warning Brief 26102026.pdf
+MMR,Myanmar,2,4,3,Moderate,,33.0,Embedded badge image gauge geometry + Impact x Likelihood matrix,Risks of High Concern,5,Embedded image xref=42; likelihood arc aspect=1.660->level 4; impact arc aspect=0.912->level 2,2026 Inter-Agency Early Warning Brief 26102026.pdf
+SOM,Somalia,,,3,Moderate,,33.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=East
+Africa; Country=Somalia; Month=Apr-26; Status=Active; Seriousness=Moderate; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+ERI,"Eritrea-
+Ethiopia",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=East
+Africa; Country=Eritrea-
+Ethiopia; Month=Oct -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+ETH,"Eritrea-
+Ethiopia",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=East
+Africa; Country=Eritrea-
+Ethiopia; Month=Oct -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+,SouthSudan,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=East
+Africa; Country=SouthSudan; Month=Jun-25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+ETH,Ethiopia,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=East
+Africa; Country=Ethiopia; Month=Jun-25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+COD,"DRC&Great
+Lakes",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=East
+Africa; Country=DRC&Great
+Lakes; Month=Feb -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+AFG,"Afghanistan 
+- Pakistan",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=Asia and 
+Pacific; Country=Afghanistan 
+- Pakistan; Month=Apr-26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+PAK,"Afghanistan 
+- Pakistan",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,7,"Region=Asia and 
+Pacific; Country=Afghanistan 
+- Pakistan; Month=Apr-26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+TCD,Chad,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=Chad; Month=Jul -26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+,"LakeChad
+Basin",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=LakeChad
+Basin; Month=Jul -26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+NGA,Nigeria,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=Nigeria; Month=Jul -26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+NGA,Nigeria,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=Nigeria; Month=Feb -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+BFA,"Central
+Sahel",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=Central
+Sahel; Month=Feb -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+MLI,"Central
+Sahel",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=Central
+Sahel; Month=Feb -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+NER,"Central
+Sahel",,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,8,"Region=West
+Africa; Country=Central
+Sahel; Month=Feb -25; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+LBN,Lebanon,,,3,Moderate,,33.0,Structured Risk Tracker table Seriousness field,Risk Tracker,9,"Region=Middle
+East; Country=Lebanon; Month=Apr-26; Status=Active; Seriousness=Moderate; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+SYR,"Syria
+(North)",,,2,Low,,0.0,Structured Risk Tracker table Seriousness field,Risk Tracker,9,"Region=Middle
+East; Country=Syria
+(North); Month=Jan-26; Status=Active; Seriousness=Low; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+COL,Colombia,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,9,"Region=Latin
+America
+andthe
+Caribbean; Country=Colombia; Month=Jul -26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+CUB,Cuba,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,9,"Region=Latin
+America
+andthe
+Caribbean; Country=Cuba; Month=Jan-26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+VEN,Venezuela,,,3,Moderate,,33.0,Structured Risk Tracker table Seriousness field,Risk Tracker,9,"Region=Latin
+America
+andthe
+Caribbean; Country=Venezuela; Month=Oct -25; Status=Active; Seriousness=Moderate; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+,ElNino,,,4,High,,67.0,Structured Risk Tracker table Seriousness field,Risk Tracker,10,"Region=Latin
+America
+andthe
+Caribbean; Country=ElNino; Month=Apr-26; Status=Active; Seriousness=High; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf
+,"Middle
+East",,,3,Moderate,,33.0,Structured Risk Tracker table Seriousness field,Risk Tracker,10,"Region=Global; Country=Middle
+East; Month=Apr-26; Status=Active; Seriousness=Moderate; Risk=",2026 Inter-Agency Early Warning Brief 26102026.pdf

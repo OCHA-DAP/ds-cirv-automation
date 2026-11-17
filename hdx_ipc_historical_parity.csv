@@ -1,0 +1,151 @@
+Country,ISO3,Workbook_HDX_IPC,Python_HDX_IPC,Validation_Status,Difference,Population_In_Phase,Reference_Start,Reference_End,IPC_Type,HDX_Resource_ID
+Eswatini,SWZ,4.0,3.0,MISMATCH,-1.0,222251.0,2026-06-01,2026-09-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Liberia,LBR,4.0,3.0,MISMATCH,-1.0,418213.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Mauritania,MRT,4.0,3.0,MISMATCH,-1.0,295561.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Nigeria,NGA,5.0,4.0,MISMATCH,-1.0,857567.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Zambia,ZMB,4.0,3.0,MISMATCH,-1.0,697809.0,2026-04-01,2026-09-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+oPt,PSE,4.0,5.0,MISMATCH,1.0,103800.0,2025-10-01,2025-11-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Kenya,KEN,,4.0,PYTHON_ONLY,,425737.0,2026-07-01,2026-10-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Afghanistan,AFG,4.0,4.0,MATCH,0.0,2865558.0,2025-09-01,2025-10-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Bangladesh,BGD,4.0,4.0,MATCH,0.0,483035.0,2026-05-01,2026-08-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Benin,BEN,4.0,4.0,MATCH,0.0,2960.0,2025-10-01,2025-12-31,current,72e22b97-65c9-4c1c-9e2c-bc402f320276
+Burundi,BDI,4.0,4.0,MATCH,0.0,220341.0,2026-04-01,2026-05-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Cabo Verde,CPV,3.0,3.0,MATCH,0.0,37752.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Cameroon,CMR,4.0,4.0,MATCH,0.0,249306.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Central African Republic,CAF,4.0,4.0,MATCH,0.0,269211.0,2025-09-01,2026-03-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Chad,TCD,4.0,4.0,MATCH,0.0,101906.0,2026-03-01,2026-05-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Congo DR,COD,4.0,4.0,MATCH,0.0,3229666.0,2025-09-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Côte d'Ivoire,CIV,4.0,4.0,MATCH,0.0,9699.0,2025-10-01,2025-12-31,current,72e22b97-65c9-4c1c-9e2c-bc402f320276
+Djibouti,DJI,4.0,4.0,MATCH,0.0,17196.0,2026-05-01,2026-06-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Ecuador,ECU,4.0,4.0,MATCH,0.0,95187.0,2025-12-01,2026-04-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Ghana,GHA,4.0,4.0,MATCH,0.0,72185.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Guatemala,GTM,4.0,4.0,MATCH,0.0,119627.0,2026-04-01,2026-06-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Guinea,GIN,4.0,4.0,MATCH,0.0,53948.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Haiti,HTI,4.0,4.0,MATCH,0.0,1895492.0,2025-09-01,2026-02-28,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Honduras,HND,4.0,4.0,MATCH,0.0,35449.0,2025-11-01,2026-03-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Lebanon,LBN,4.0,4.0,MATCH,0.0,22497.0,2025-11-01,2026-03-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Lesotho,LSO,3.0,3.0,MATCH,0.0,234468.0,2026-05-01,2026-09-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Madagascar,MDG,4.0,4.0,MATCH,0.0,24691.0,2026-03-01,2026-05-31,current,34b4c740-4af5-4ba0-9652-c5f2a42129e4
+Malawi,MWI,3.0,3.0,MATCH,0.0,1935075.0,2026-04-01,2026-09-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Mali,MLI,4.0,4.0,MATCH,0.0,30817.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Mozambique,MOZ,4.0,4.0,MATCH,0.0,81141.0,2026-07-01,2026-09-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Niger,NER,4.0,4.0,MATCH,0.0,14516.0,2025-10-01,2025-12-31,current,34b4c740-4af5-4ba0-9652-c5f2a42129e4
+Pakistan,PAK,4.0,4.0,MATCH,0.0,1385610.0,2026-03-01,2026-03-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Senegal,SEN,4.0,4.0,MATCH,0.0,8406.0,2026-03-01,2026-05-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Sierra Leone,SLE,4.0,4.0,MATCH,0.0,65078.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Somalia,SOM,4.0,4.0,MATCH,0.0,1397070.0,2026-07-01,2026-09-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+South Sudan,SSD,5.0,5.0,MATCH,0.0,27856.0,2025-09-01,2025-11-30,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Sudan,SDN,5.0,5.0,MATCH,0.0,134808.0,2026-02-01,2026-05-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Tanzania,TZA,3.0,3.0,MATCH,0.0,1028267.0,2026-02-01,2026-05-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Togo,TGO,3.0,3.0,MATCH,0.0,288383.0,2025-10-01,2025-12-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Uganda,UGA,4.0,4.0,MATCH,0.0,117627.0,2026-08-01,2026-10-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Yemen,YEM,4.0,4.0,MATCH,0.0,1403214.0,2026-03-01,2026-05-31,current,913bd6ac-cdbc-4875-9b74-4ee1eaba000a
+Albania,ALB,,,MATCH_NO_DATA,,,,,,
+Algeria,DZA,,,MATCH_NO_DATA,,,,,,
+Angola,AGO,,,MATCH_NO_DATA,,,,,,
+Antigua and Barbuda,ATG,,,MATCH_NO_DATA,,,,,,
+Argentina,ARG,,,MATCH_NO_DATA,,,,,,
+Armenia,ARM,,,MATCH_NO_DATA,,,,,,
+Azerbaijan,AZE,,,MATCH_NO_DATA,,,,,,
+Bahamas,BHS,,,MATCH_NO_DATA,,,,,,
+Bahrain,BHR,,,MATCH_NO_DATA,,,,,,
+Barbados,BRB,,,MATCH_NO_DATA,,,,,,
+Belarus,BLR,,,MATCH_NO_DATA,,,,,,
+Belize,BLZ,,,MATCH_NO_DATA,,,,,,
+Bhutan,BTN,,,MATCH_NO_DATA,,,,,,
+Bolivia,BOL,,,MATCH_NO_DATA,,,,,,
+Bosnia and Herzegovina,BIH,,,MATCH_NO_DATA,,,,,,
+Botswana,BWA,,,MATCH_NO_DATA,,,,,,
+Brazil,BRA,,,MATCH_NO_DATA,,,,,,
+Brunei Darussalam,BRN,,,MATCH_NO_DATA,,,,,,
+Burkina Faso,BFA,,,MATCH_NO_DATA,,,,,,
+Cambodia,KHM,,,MATCH_NO_DATA,,,,,,
+Chile,CHL,,,MATCH_NO_DATA,,,,,,
+China,CHN,,,MATCH_NO_DATA,,,,,,
+Colombia,COL,,,MATCH_NO_DATA,,,,,,
+Comoros,COM,,,MATCH_NO_DATA,,,,,,
+Congo,COG,,,MATCH_NO_DATA,,,,,,
+Costa Rica,CRI,,,MATCH_NO_DATA,,,,,,
+Cuba,CUB,,,MATCH_NO_DATA,,,,,,
+Dominica,DMA,,,MATCH_NO_DATA,,,,,,
+Dominican Republic,DOM,,,MATCH_NO_DATA,,,,,,
+Egypt,EGY,,,MATCH_NO_DATA,,,,,,
+El Salvador,SLV,,,MATCH_NO_DATA,,,,,,
+Equatorial Guinea,GNQ,,,MATCH_NO_DATA,,,,,,
+Eritrea,ERI,,,MATCH_NO_DATA,,,,,,
+Ethiopia,ETH,,,MATCH_NO_DATA,,,,,,
+Fiji,FJI,,,MATCH_NO_DATA,,,,,,
+Gabon,GAB,,,MATCH_NO_DATA,,,,,,
+Gambia,GMB,,,MATCH_NO_DATA,,,,,,
+Georgia,GEO,,,MATCH_NO_DATA,,,,,,
+Guinea-Bissau,GNB,,,MATCH_NO_DATA,,,,,,
+Guyana,GUY,,,MATCH_NO_DATA,,,,,,
+India,IND,,,MATCH_NO_DATA,,,,,,
+Indonesia,IDN,,,MATCH_NO_DATA,,,,,,
+Iran,IRN,,,MATCH_NO_DATA,,,,,,
+Iraq,IRQ,,,MATCH_NO_DATA,,,,,,
+Israel,ISR,,,MATCH_NO_DATA,,,,,,
+Jamaica,JAM,,,MATCH_NO_DATA,,,,,,
+Jordan,JOR,,,MATCH_NO_DATA,,,,,,
+Kazakhstan,KAZ,,,MATCH_NO_DATA,,,,,,
+Kiribati,KIR,,,MATCH_NO_DATA,,,,,,
+Korea DPR,PRK,,,MATCH_NO_DATA,,,,,,
+Korea Republic of,KOR,,,MATCH_NO_DATA,,,,,,
+Kuwait,KWT,,,MATCH_NO_DATA,,,,,,
+Kyrgyzstan,KGZ,,,MATCH_NO_DATA,,,,,,
+Lao PDR,LAO,,,MATCH_NO_DATA,,,,,,
+Libya,LBY,,,MATCH_NO_DATA,,,,,,
+Malaysia,MYS,,,MATCH_NO_DATA,,,,,,
+Maldives,MDV,,,MATCH_NO_DATA,,,,,,
+Marshall Islands,MHL,,,MATCH_NO_DATA,,,,,,
+Mauritius,MUS,,,MATCH_NO_DATA,,,,,,
+Mexico,MEX,,,MATCH_NO_DATA,,,,,,
+Micronesia,FSM,,,MATCH_NO_DATA,,,,,,
+Moldova Republic of,MDA,,,MATCH_NO_DATA,,,,,,
+Mongolia,MNG,,,MATCH_NO_DATA,,,,,,
+Montenegro,MNE,,,MATCH_NO_DATA,,,,,,
+Morocco,MAR,,,MATCH_NO_DATA,,,,,,
+Myanmar,MMR,,,MATCH_NO_DATA,,,,,,
+Namibia,NAM,,,MATCH_NO_DATA,,,,,,
+Nauru,NRU,,,MATCH_NO_DATA,,,,,,
+Nepal,NPL,,,MATCH_NO_DATA,,,,,,
+Nicaragua,NIC,,,MATCH_NO_DATA,,,,,,
+North Macedonia,MKD,,,MATCH_NO_DATA,,,,,,
+Oman,OMN,,,MATCH_NO_DATA,,,,,,
+Palau,PLW,,,MATCH_NO_DATA,,,,,,
+Panama,PAN,,,MATCH_NO_DATA,,,,,,
+Papua New Guinea,PNG,,,MATCH_NO_DATA,,,,,,
+Paraguay,PRY,,,MATCH_NO_DATA,,,,,,
+Peru,PER,,,MATCH_NO_DATA,,,,,,
+Philippines,PHL,,,MATCH_NO_DATA,,,,,,
+Qatar,QAT,,,MATCH_NO_DATA,,,,,,
+Russian Federation,RUS,,,MATCH_NO_DATA,,,,,,
+Rwanda,RWA,,,MATCH_NO_DATA,,,,,,
+Saint Kitts and Nevis,KNA,,,MATCH_NO_DATA,,,,,,
+Saint Lucia,LCA,,,MATCH_NO_DATA,,,,,,
+Saint Vincent and the Grenadines,VCT,,,MATCH_NO_DATA,,,,,,
+Samoa,WSM,,,MATCH_NO_DATA,,,,,,
+Sao Tome and Principe,STP,,,MATCH_NO_DATA,,,,,,
+Serbia,SRB,,,MATCH_NO_DATA,,,,,,
+Seychelles,SYC,,,MATCH_NO_DATA,,,,,,
+Solomon Islands,SLB,,,MATCH_NO_DATA,,,,,,
+South Africa,ZAF,,,MATCH_NO_DATA,,,,,,
+Sri Lanka,LKA,,,MATCH_NO_DATA,,,,,,
+Suriname,SUR,,,MATCH_NO_DATA,,,,,,
+Syria,SYR,,,MATCH_NO_DATA,,,,,,
+Tajikistan,TJK,,,MATCH_NO_DATA,,,,,,
+Thailand,THA,,,MATCH_NO_DATA,,,,,,
+Timor-Leste,TLS,,,MATCH_NO_DATA,,,,,,
+Tonga,TON,,,MATCH_NO_DATA,,,,,,
+Trinidad and Tobago,TTO,,,MATCH_NO_DATA,,,,,,
+Tunisia,TUN,,,MATCH_NO_DATA,,,,,,
+Turkmenistan,TKM,,,MATCH_NO_DATA,,,,,,
+Tuvalu,TUV,,,MATCH_NO_DATA,,,,,,
+Türkiye,TUR,,,MATCH_NO_DATA,,,,,,
+Ukraine,UKR,,,MATCH_NO_DATA,,,,,,
+Uruguay,URY,,,MATCH_NO_DATA,,,,,,
+Uzbekistan,UZB,,,MATCH_NO_DATA,,,,,,
+Vanuatu,VUT,,,MATCH_NO_DATA,,,,,,
+Venezuela,VEN,,,MATCH_NO_DATA,,,,,,
+Viet Nam,VNM,,,MATCH_NO_DATA,,,,,,
+Zimbabwe,ZWE,,,MATCH_NO_DATA,,,,,,

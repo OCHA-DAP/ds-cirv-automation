@@ -1,0 +1,18 @@
+{
+  "source": "International Crisis Group CrisisWatch",
+  "database_url": "https://crisisgroup-staging.sbx.so/crisiswatch/database",
+  "generated_at_utc": "2026-11-04T19:43:17.111883+00:00",
+  "lookback_months": 6,
+  "selected_months": [
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09"
+  ],
+  "method": "Six separate monthly database requests. Main monthly state is read from the entry heading. Formal Conflict Risk Alert and Resolution Opportunity labels are parsed only when explicitly associated with the requested month inside the structured CrisisWatch entry.",
+  "mapped_evidence_records": 60,
+  "unmatched_evidence_records": 0,
+  "scoring": "No CERF score is calculated in this collector."
+}

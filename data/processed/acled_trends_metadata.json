@@ -1,0 +1,30 @@
+{
+  "source": "ACLED Trends",
+  "source_page": "https://acleddata.com/platform/trends",
+  "api_url": "https://trendfinder-api.acledapps.com/api/v1/overview?outcome=organized_violence&lead=0&lag=1",
+  "retrieved_at_utc": "2026-11-04T19:50:01.056087+00:00",
+  "cirv_method": "Use organized-violence activity during the latest completed four-week period and compare it with the previous-month average.",
+  "api_parameters": {
+    "outcome": "organized_violence",
+    "lead": 0,
+    "lag": 1
+  },
+  "comparison": "Month",
+  "change_pct_handling": "ACLED change_pct is fractional. The collector multiplies it by 100 to produce an ordinary signed percentage.",
+  "country_records_path": "displayData.countries",
+  "raw_country_records": 237,
+  "mapped_countries": 146,
+  "unmatched_countries": 91,
+  "measured_period_start": "2026-10-03",
+  "measured_period_end": "2026-10-30",
+  "comparison_period_start": "2026-09-05",
+  "comparison_period_end": "2026-10-02",
+  "latest_acled_update": "2026-11-04",
+  "raw_api_metadata": {
+    "period_start": null,
+    "period_end": null,
+    "comparison_start": 1788566400,
+    "comparison_end": 1790899200,
+    "latest_update": 1793776801
+  }
+}

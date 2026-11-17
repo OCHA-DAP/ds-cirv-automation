@@ -1,0 +1,151 @@
+﻿ISO3,CERF_Country,ipc_value,fewsnet_value,grfc_value,IPC_Classification,IPC_Classification_Source,IPC_Override_Reason,IPC_Score_100,fao_value,asap_value,FAO_Available,ASAP_Available,FAO_Score_100,ASAP_Score_100,Shock_Block_Available,Shock_Block_Score_100,Shock_Block_Method,sofi_value,SOFI_Available,SOFI_Score_100,IPC_Base_Weight,Shock_Base_Weight,SOFI_Base_Weight,Available_Base_Weight,Available_Block_Count,Effective_IPC_Weight,Effective_Shock_Weight,Effective_SOFI_Weight,Available_Blocks,Missing_Blocks,CERF_Food_Insecurity
+AFG,Afghanistan,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,77.8,True,77.8,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,78.56
+ALB,Albania,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,31.8,True,31.8,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",31.8
+DZA,Algeria,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,17.6,True,17.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",17.6
+AGO,Angola,,2.0,,2.0,FEWS NET,,40.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,75.4,True,75.4,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,48.849999999999994
+ATG,Antigua and Barbuda,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+ARG,Argentina,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,31.7,True,31.7,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",31.7
+ARM,Armenia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,7.1,True,7.1,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",7.1
+AZE,Azerbaijan,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,14.6,True,14.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",14.6
+BHS,Bahamas,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+BHR,Bahrain,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+BGD,Bangladesh,4.0,,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,26.2,True,26.2,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,73.24
+BRB,Barbados,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+BLR,Belarus,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,1.0,True,1.0,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",1.0
+BLZ,Belize,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,12.8,True,12.8,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",12.800000000000002
+BEN,Benin,4.0,,,4.0,HDX IPC,,80.0,,1.0,False,True,,50.0,True,50.0,ASAP receives full shock-block weight,65.6,True,65.6,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,71.12
+BTN,Bhutan,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+BOL,Bolivia,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,29.6,True,29.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",29.6
+BIH,Bosnia and Herzegovina,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,8.7,True,8.7,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",8.7
+BWA,Botswana,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,52.0,True,52.0,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",52.0
+BRA,Brazil,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,9.6,True,9.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",9.6
+BRN,Brunei Darussalam,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+BFA,Burkina Faso,,4.0,,4.0,FEWS NET,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,41.2,True,41.2,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,71.24
+BDI,Burundi,4.0,,3.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,70.8,True,70.8,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,82.16
+CPV,Cabo Verde,3.0,,,3.0,HDX IPC,,60.0,,,False,False,,,False,,FAO and ASAP unavailable for weighting,32.1,True,32.1,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,53.025
+KHM,Cambodia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,36.4,True,36.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",36.4
+CMR,Cameroon,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,60.9,True,60.9,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,80.18
+CAF,Central African Republic,4.0,,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,85.0
+TCD,Chad,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,65.0,True,65.0,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,76.0
+CHL,Chile,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,16.0,True,16.0,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",16.0
+CHN,China,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+COL,Colombia,,3.0,3.0,3.0,FEWS NET,,60.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,28.0,True,28.0,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,52.0
+COM,Comoros,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+COG,Congo,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+COD,Congo DR,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,81.7,True,81.7,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,79.34
+CRI,Costa Rica,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,13.9,True,13.9,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",13.9
+CUB,Cuba,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+CIV,Côte d'Ivoire,4.0,,,4.0,HDX IPC,,80.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,37.9,True,37.9,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,69.475
+DJI,Djibouti,4.0,,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,85.0
+DMA,Dominica,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+DOM,Dominican Republic,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,41.3,True,41.3,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",41.3
+ECU,Ecuador,4.0,,,4.0,HDX IPC,,80.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,31.1,True,31.1,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,67.77499999999999
+EGY,Egypt,,,3.0,3.0,GRFC,,60.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,29.9,True,29.9,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,52.475
+SLV,El Salvador,,,3.0,3.0,GRFC,,60.0,,1.0,False,True,,50.0,True,50.0,ASAP receives full shock-block weight,41.7,True,41.7,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,54.34
+GNQ,Equatorial Guinea,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+ERI,Eritrea,,,,,,,,,1.0,False,True,,50.0,True,50.0,ASAP receives full shock-block weight,,False,,0.0,0.2,0.0,0.2,1,0.0,1.0,0.0,FAO/ASAP,"IPC, SOFI",50.0
+SWZ,Eswatini,3.0,,,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,61.7,True,61.7,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,68.34
+ETH,Ethiopia,,,,,,,,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,60.1,True,60.1,0.0,0.2,0.2,0.4,2,0.0,0.5,0.5,"FAO/ASAP, SOFI",IPC,67.55
+FJI,Fiji,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+GAB,Gabon,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+GMB,Gambia,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,47.2,True,47.2,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",47.2
+GEO,Georgia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,22.8,True,22.8,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",22.8
+GHA,Ghana,4.0,,,4.0,HDX IPC,,80.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,43.5,True,43.5,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,70.875
+GTM,Guatemala,4.0,3.0,4.0,4.0,HDX IPC,,80.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,49.0,True,49.0,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,72.24999999999999
+GIN,Guinea,4.0,,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,85.0
+GNB,Guinea-Bissau,,,3.0,3.0,GRFC,,60.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.6,0.0,0.0,0.6,1,1.0,0.0,0.0,IPC,"FAO/ASAP, SOFI",60.0
+GUY,Guyana,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,25.5,True,25.5,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",25.5
+HTI,Haiti,4.0,4.0,5.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,83.5,True,83.5,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,84.7
+HND,Honduras,4.0,,4.0,4.0,HDX IPC,,80.0,,1.0,False,True,,50.0,True,50.0,ASAP receives full shock-block weight,39.3,True,39.3,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,65.86
+IND,India,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+IDN,Indonesia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,4.2,True,4.2,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",4.2
+IRN,Iran,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,37.7,True,37.7,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",37.7
+IRQ,Iraq,,,3.0,3.0,GRFC,,60.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.6,0.0,0.0,0.6,1,1.0,0.0,0.0,IPC,"FAO/ASAP, SOFI",60.0
+ISR,Israel,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,8.9,True,8.9,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",8.9
+JAM,Jamaica,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,55.8,True,55.8,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",55.8
+JOR,Jordan,,,3.0,3.0,GRFC,,60.0,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.6,0.0,0.0,0.6,1,1.0,0.0,0.0,IPC,"FAO/ASAP, SOFI",60.0
+KAZ,Kazakhstan,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,1.4,True,1.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",1.3999999999999997
+KEN,Kenya,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,71.7,True,71.7,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,77.34
+KIR,Kiribati,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,43.9,True,43.9,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",43.89999999999999
+PRK,Korea DPR,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+KOR,Korea Republic of,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,5.8,True,5.8,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",5.799999999999999
+KWT,Kuwait,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,9.4,True,9.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",9.4
+KGZ,Kyrgyzstan,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,7.4,True,7.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",7.4
+LAO,Lao PDR,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,34.4,True,34.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",34.4
+LBN,Lebanon,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,,True,False,100.0,,True,100.0,FAO receives full shock-block weight,44.3,True,44.3,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,76.86
+LSO,Lesotho,3.0,,3.0,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,61.6,True,61.6,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,68.32
+LBR,Liberia,3.0,,3.0,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,79.0,True,79.0,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,71.8
+LBY,Libya,,,,,,,,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,31.6,True,31.6,0.0,0.2,0.2,0.4,2,0.0,0.5,0.5,"FAO/ASAP, SOFI",IPC,65.8
+MDG,Madagascar,4.0,3.0,3.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,61.1,True,61.1,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,75.22
+MWI,Malawi,3.0,2.0,4.0,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,81.6,True,81.6,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,72.32
+MYS,Malaysia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,15.4,True,15.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",15.4
+MDV,Maldives,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+MLI,Mali,4.0,4.0,5.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,20.6,True,20.6,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,67.12
+MHL,Marshall Islands,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+MRT,Mauritania,3.0,,4.0,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,65.1,True,65.1,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,69.02
+MUS,Mauritius,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,28.2,True,28.2,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",28.200000000000003
+MEX,Mexico,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,16.5,True,16.5,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",16.5
+FSM,Micronesia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+MDA,Moldova Republic of,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,26.4,True,26.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",26.4
+MNG,Mongolia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,4.7,True,4.7,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",4.7
+MNE,Montenegro,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,9.0,True,9.0,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",9.0
+MAR,Morocco,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+MOZ,Mozambique,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,85.0
+MMR,Myanmar,,,4.0,4.0,GRFC,,80.0,2.0,,True,False,100.0,,True,100.0,FAO receives full shock-block weight,31.3,True,31.3,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,74.26
+NAM,Namibia,,,4.0,4.0,GRFC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,54.0,True,54.0,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,78.8
+NRU,Nauru,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+NPL,Nepal,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,35.0,True,35.0,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",35.0
+NIC,Nicaragua,,,,,,,,,1.0,False,True,,50.0,True,50.0,ASAP receives full shock-block weight,,False,,0.0,0.2,0.0,0.2,1,0.0,1.0,0.0,FAO/ASAP,"IPC, SOFI",50.0
+NER,Niger,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,50.3,True,50.3,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,78.06
+NGA,Nigeria,4.0,4.0,4.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,76.5,True,76.5,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,78.3
+MKD,North Macedonia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,9.2,True,9.2,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",9.2
+OMN,Oman,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+PAK,Pakistan,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,22.9,True,22.9,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,72.58
+PLW,Palau,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,28.1,True,28.1,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",28.100000000000005
+PAN,Panama,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+PNG,Papua New Guinea,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+PRY,Paraguay,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,25.8,True,25.8,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",25.8
+PER,Peru,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,33.6,True,33.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",33.6
+PHL,Philippines,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,32.7,True,32.7,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",32.7
+QAT,Qatar,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+RUS,Russian Federation,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,2.6,True,2.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",2.6
+RWA,Rwanda,,,4.0,4.0,GRFC,,80.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.6,0.0,0.0,0.6,1,1.0,0.0,0.0,IPC,"FAO/ASAP, SOFI",80.0
+KNA,Saint Kitts and Nevis,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+LCA,Saint Lucia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+VCT,Saint Vincent and the Grenadines,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+WSM,Samoa,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,18.2,True,18.2,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",18.2
+STP,Sao Tome and Principe,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+SEN,Senegal,4.0,,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,27.7,True,27.7,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,73.54
+SRB,Serbia,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,6.7,True,6.7,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",6.7
+SYC,Seychelles,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+SLE,Sierra Leone,4.0,,4.0,4.0,HDX IPC,,80.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,88.1,True,88.1,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,85.62
+SLB,Solomon Islands,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+SOM,Somalia,4.0,4.0,4.0,4.0,HDX IPC,,80.0,2.0,2.0,True,True,100.0,100.0,True,100.0,FAO and ASAP share shock block equally,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,85.0
+ZAF,South Africa,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,20.9,True,20.9,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",20.9
+SSD,South Sudan,5.0,4.0,5.0,5.0,HDX IPC,,100.0,2.0,2.0,True,True,100.0,100.0,True,100.0,FAO and ASAP share shock block equally,88.8,True,88.8,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,97.76
+LKA,Sri Lanka,,2.0,3.0,2.0,FEWS NET,,40.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,10.1,True,10.1,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,32.525
+SDN,Sudan,5.0,4.0,5.0,5.0,HDX IPC,,100.0,2.0,2.0,True,True,100.0,100.0,True,100.0,FAO and ASAP share shock block equally,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,100.0
+SUR,Suriname,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+SYR,Syria,,3.0,3.0,3.0,FEWS NET,,60.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,63.75
+TJK,Tajikistan,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,24.0,True,24.0,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",24.000000000000004
+TZA,Tanzania,3.0,,3.0,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,57.0,True,57.0,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,67.4
+THA,Thailand,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,4.5,True,4.5,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",4.5
+TLS,Timor-Leste,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+TGO,Togo,3.0,,,3.0,HDX IPC,,60.0,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,56.3,True,56.3,0.6,0.0,0.2,0.8,2,0.7499999999999999,0.0,0.25,"IPC, SOFI",FAO/ASAP,59.074999999999996
+TON,Tonga,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+TTO,Trinidad and Tobago,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,27.6,True,27.6,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",27.6
+TUN,Tunisia,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,24.2,True,24.2,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",24.2
+TKM,Turkmenistan,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+TUV,Tuvalu,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+TUR,Türkiye,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+UGA,Uganda,4.0,3.0,4.0,4.0,HDX IPC,,80.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,51.6,True,51.6,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,73.32
+UKR,Ukraine,,3.0,3.0,3.0,FEWS NET,,60.0,2.0,,True,False,100.0,,True,100.0,FAO receives full shock-block weight,32.0,True,32.0,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,62.4
+URY,Uruguay,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,15.5,True,15.5,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",15.5
+UZB,Uzbekistan,,,,,,,,,0.0,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+VUT,Vanuatu,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,,"IPC, FAO/ASAP, SOFI",0.0
+VEN,Venezuela,,2.0,,2.0,FEWS NET,,40.0,,,False,False,,,False,,FAO and ASAP unavailable for weighting,,False,,0.6,0.0,0.0,0.6,1,1.0,0.0,0.0,IPC,"FAO/ASAP, SOFI",40.0
+VNM,Viet Nam,,,,,,,,,,False,False,,,False,,FAO and ASAP unavailable for weighting,9.4,True,9.4,0.0,0.0,0.2,0.2,1,0.0,0.0,1.0,SOFI,"IPC, FAO/ASAP",9.4
+YEM,Yemen,4.0,4.0,5.0,5.0,CERF manual override,CERF manual adjustment reflecting the likely prevalence of IPC Phase 5 in DFA-controlled areas where current IPC analysis was unavailable.,100.0,2.0,1.0,True,True,100.0,50.0,True,75.0,FAO and ASAP share shock block equally,74.4,True,74.4,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,89.88
+ZMB,Zambia,3.0,,4.0,3.0,HDX IPC,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,45.8,True,45.8,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,65.16
+ZWE,Zimbabwe,,3.0,3.0,3.0,FEWS NET,,60.0,2.0,0.0,True,False,100.0,,True,100.0,FAO receives full shock-block weight,70.1,True,70.1,0.6,0.2,0.2,1.0,3,0.6,0.2,0.2,"IPC, FAO/ASAP, SOFI",,70.02
+PSE,oPt,5.0,,5.0,5.0,HDX IPC,,100.0,2.0,,True,False,100.0,,True,100.0,FAO receives full shock-block weight,,False,,0.6,0.2,0.0,0.8,2,0.7499999999999999,0.25,0.0,"IPC, FAO/ASAP",SOFI,100.0

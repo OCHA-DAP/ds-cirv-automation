@@ -32,3 +32,21 @@ env/
 /input/*.xlsx
 /cirv_integration_audit.json
 /config/.iasc_graph_token_cache.json
+
+# Local credentials and secrets
+config/acled_credentials.json
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Patch backups
+*.bak
+config/iasc_outlook.json
+cirv_source_mapping.zip

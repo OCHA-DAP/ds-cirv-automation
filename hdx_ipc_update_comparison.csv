@@ -1,0 +1,151 @@
+Country,ISO3,Old_HDX_IPC,HDX_Country,New_HDX_IPC,IPC_Change,Changed,Previously_Had_IPC,Now_Has_IPC,Gained_IPC,Lost_IPC
+Afghanistan,AFG,4.0,Afghanistan,4.0,0.0,False,True,True,False,False
+Albania,ALB,,,,,False,False,False,False,False
+Algeria,DZA,,,,,False,False,False,False,False
+Angola,AGO,,,,,False,False,False,False,False
+Antigua and Barbuda,ATG,,,,,False,False,False,False,False
+Argentina,ARG,,,,,False,False,False,False,False
+Armenia,ARM,,,,,False,False,False,False,False
+Azerbaijan,AZE,,,,,False,False,False,False,False
+Bahamas,BHS,,,,,False,False,False,False,False
+Bahrain,BHR,,,,,False,False,False,False,False
+Bangladesh,BGD,4.0,Bangladesh,4.0,0.0,False,True,True,False,False
+Barbados,BRB,,,,,False,False,False,False,False
+Belarus,BLR,,,,,False,False,False,False,False
+Belize,BLZ,,,,,False,False,False,False,False
+Benin,BEN,4.0,Benin,4.0,0.0,False,True,True,False,False
+Bhutan,BTN,,,,,False,False,False,False,False
+Bolivia,BOL,,,,,False,False,False,False,False
+Bosnia and Herzegovina,BIH,,,,,False,False,False,False,False
+Botswana,BWA,,,,,False,False,False,False,False
+Brazil,BRA,,,,,False,False,False,False,False
+Brunei Darussalam,BRN,,,,,False,False,False,False,False
+Burkina Faso,BFA,,,,,False,False,False,False,False
+Burundi,BDI,4.0,Burundi,4.0,0.0,False,True,True,False,False
+Cabo Verde,CPV,3.0,Cabo Verde,3.0,0.0,False,True,True,False,False
+Cambodia,KHM,,,,,False,False,False,False,False
+Cameroon,CMR,4.0,Cameroon,4.0,0.0,False,True,True,False,False
+Central African Republic,CAF,4.0,Central African Republic,4.0,0.0,False,True,True,False,False
+Chad,TCD,4.0,Chad,4.0,0.0,False,True,True,False,False
+Chile,CHL,,,,,False,False,False,False,False
+China,CHN,,,,,False,False,False,False,False
+Colombia,COL,,,,,False,False,False,False,False
+Comoros,COM,,,,,False,False,False,False,False
+Congo,COG,,,,,False,False,False,False,False
+Congo DR,COD,4.0,Democratic Republic of the Congo,4.0,0.0,False,True,True,False,False
+Costa Rica,CRI,,,,,False,False,False,False,False
+Côte d'Ivoire,CIV,4.0,Côte d'Ivoire,4.0,0.0,False,True,True,False,False
+Cuba,CUB,,,,,False,False,False,False,False
+Djibouti,DJI,4.0,Djibouti,4.0,0.0,False,True,True,False,False
+Dominica,DMA,,,,,False,False,False,False,False
+Dominican Republic,DOM,,,,,False,False,False,False,False
+Ecuador,ECU,4.0,Ecuador,4.0,0.0,False,True,True,False,False
+Egypt,EGY,,,,,False,False,False,False,False
+El Salvador,SLV,,,,,False,False,False,False,False
+Equatorial Guinea,GNQ,,,,,False,False,False,False,False
+Eritrea,ERI,,,,,False,False,False,False,False
+Eswatini,SWZ,4.0,Eswatini,3.0,-1.0,True,True,True,False,False
+Ethiopia,ETH,,,,,False,False,False,False,False
+Fiji,FJI,,,,,False,False,False,False,False
+Gabon,GAB,,,,,False,False,False,False,False
+Gambia,GMB,,,,,False,False,False,False,False
+Georgia,GEO,,,,,False,False,False,False,False
+Ghana,GHA,4.0,Ghana,4.0,0.0,False,True,True,False,False
+Guatemala,GTM,4.0,Guatemala,4.0,0.0,False,True,True,False,False
+Guinea,GIN,4.0,Guinea,4.0,0.0,False,True,True,False,False
+Guinea-Bissau,GNB,,,,,False,False,False,False,False
+Guyana,GUY,,,,,False,False,False,False,False
+Haiti,HTI,4.0,Haiti,4.0,0.0,False,True,True,False,False
+Honduras,HND,4.0,Honduras,4.0,0.0,False,True,True,False,False
+India,IND,,,,,False,False,False,False,False
+Indonesia,IDN,,,,,False,False,False,False,False
+Iran,IRN,,,,,False,False,False,False,False
+Iraq,IRQ,,,,,False,False,False,False,False
+Israel,ISR,,,,,False,False,False,False,False
+Jamaica,JAM,,,,,False,False,False,False,False
+Jordan,JOR,,,,,False,False,False,False,False
+Kazakhstan,KAZ,,,,,False,False,False,False,False
+Kenya,KEN,,Kenya,4.0,,False,False,True,True,False
+Kiribati,KIR,,,,,False,False,False,False,False
+Korea DPR,PRK,,,,,False,False,False,False,False
+Korea Republic of,KOR,,,,,False,False,False,False,False
+Kuwait,KWT,,,,,False,False,False,False,False
+Kyrgyzstan,KGZ,,,,,False,False,False,False,False
+Lao PDR,LAO,,,,,False,False,False,False,False
+Lebanon,LBN,4.0,Lebanon,4.0,0.0,False,True,True,False,False
+Lesotho,LSO,3.0,Lesotho,3.0,0.0,False,True,True,False,False
+Liberia,LBR,4.0,Liberia,3.0,-1.0,True,True,True,False,False
+Libya,LBY,,,,,False,False,False,False,False
+Madagascar,MDG,4.0,Madagascar,4.0,0.0,False,True,True,False,False
+Malawi,MWI,3.0,Malawi,3.0,0.0,False,True,True,False,False
+Malaysia,MYS,,,,,False,False,False,False,False
+Maldives,MDV,,,,,False,False,False,False,False
+Mali,MLI,4.0,Mali,4.0,0.0,False,True,True,False,False
+Marshall Islands,MHL,,,,,False,False,False,False,False
+Mauritania,MRT,4.0,Mauritania,3.0,-1.0,True,True,True,False,False
+Mauritius,MUS,,,,,False,False,False,False,False
+Mexico,MEX,,,,,False,False,False,False,False
+Micronesia,FSM,,,,,False,False,False,False,False
+Moldova Republic of,MDA,,,,,False,False,False,False,False
+Mongolia,MNG,,,,,False,False,False,False,False
+Montenegro,MNE,,,,,False,False,False,False,False
+Morocco,MAR,,,,,False,False,False,False,False
+Mozambique,MOZ,4.0,Mozambique,4.0,0.0,False,True,True,False,False
+Myanmar,MMR,,,,,False,False,False,False,False
+Namibia,NAM,,,,,False,False,False,False,False
+Nauru,NRU,,,,,False,False,False,False,False
+Nepal,NPL,,,,,False,False,False,False,False
+Nicaragua,NIC,,,,,False,False,False,False,False
+Niger,NER,4.0,Niger,4.0,0.0,False,True,True,False,False
+Nigeria,NGA,5.0,Nigeria,4.0,-1.0,True,True,True,False,False
+North Macedonia,MKD,,,,,False,False,False,False,False
+Oman,OMN,,,,,False,False,False,False,False
+Pakistan,PAK,4.0,Pakistan,4.0,0.0,False,True,True,False,False
+Palau,PLW,,,,,False,False,False,False,False
+oPt,PSE,4.0,State of Palestine,5.0,1.0,True,True,True,False,False
+Panama,PAN,,,,,False,False,False,False,False
+Papua New Guinea,PNG,,,,,False,False,False,False,False
+Paraguay,PRY,,,,,False,False,False,False,False
+Peru,PER,,,,,False,False,False,False,False
+Philippines,PHL,,,,,False,False,False,False,False
+Qatar,QAT,,,,,False,False,False,False,False
+Russian Federation,RUS,,,,,False,False,False,False,False
+Rwanda,RWA,,,,,False,False,False,False,False
+Saint Kitts and Nevis,KNA,,,,,False,False,False,False,False
+Saint Lucia,LCA,,,,,False,False,False,False,False
+Saint Vincent and the Grenadines,VCT,,,,,False,False,False,False,False
+Samoa,WSM,,,,,False,False,False,False,False
+Sao Tome and Principe,STP,,,,,False,False,False,False,False
+Senegal,SEN,4.0,Senegal,4.0,0.0,False,True,True,False,False
+Serbia,SRB,,,,,False,False,False,False,False
+Seychelles,SYC,,,,,False,False,False,False,False
+Sierra Leone,SLE,4.0,Sierra Leone,4.0,0.0,False,True,True,False,False
+Solomon Islands,SLB,,,,,False,False,False,False,False
+Somalia,SOM,4.0,Somalia,4.0,0.0,False,True,True,False,False
+South Africa,ZAF,,,,,False,False,False,False,False
+South Sudan,SSD,5.0,South Sudan,5.0,0.0,False,True,True,False,False
+Sri Lanka,LKA,,,,,False,False,False,False,False
+Sudan,SDN,5.0,Sudan,5.0,0.0,False,True,True,False,False
+Suriname,SUR,,,,,False,False,False,False,False
+Syria,SYR,,,,,False,False,False,False,False
+Tajikistan,TJK,,,,,False,False,False,False,False
+Tanzania,TZA,3.0,United Republic of Tanzania,3.0,0.0,False,True,True,False,False
+Thailand,THA,,,,,False,False,False,False,False
+Timor-Leste,TLS,,,,,False,False,False,False,False
+Togo,TGO,3.0,Togo,3.0,0.0,False,True,True,False,False
+Tonga,TON,,,,,False,False,False,False,False
+Trinidad and Tobago,TTO,,,,,False,False,False,False,False
+Tunisia,TUN,,,,,False,False,False,False,False
+Türkiye,TUR,,,,,False,False,False,False,False
+Turkmenistan,TKM,,,,,False,False,False,False,False
+Tuvalu,TUV,,,,,False,False,False,False,False
+Uganda,UGA,4.0,Uganda,4.0,0.0,False,True,True,False,False
+Ukraine,UKR,,,,,False,False,False,False,False
+Uruguay,URY,,,,,False,False,False,False,False
+Uzbekistan,UZB,,,,,False,False,False,False,False
+Vanuatu,VUT,,,,,False,False,False,False,False
+Venezuela,VEN,,,,,False,False,False,False,False
+Viet Nam,VNM,,,,,False,False,False,False,False
+Yemen,YEM,4.0,Yemen,4.0,0.0,False,True,True,False,False
+Zambia,ZMB,4.0,Zambia,3.0,-1.0,True,True,True,False,False
+Zimbabwe,ZWE,,,,,False,False,False,False,False

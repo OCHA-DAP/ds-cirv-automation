@@ -1,0 +1,151 @@
+﻿ISO3,CERF_Country,WCI_Available,ACLED_Trends_Available,CrisisWatch_Available,Conflict_Available,Conflict_Calculation_Status
+AFG,Afghanistan,True,True,True,True,Complete conflict evidence
+ALB,Albania,True,True,True,True,Complete conflict evidence
+DZA,Algeria,True,True,True,True,Complete conflict evidence
+AGO,Angola,True,True,True,True,Complete conflict evidence
+ATG,Antigua and Barbuda,True,True,True,True,Complete conflict evidence
+ARG,Argentina,True,True,True,True,Complete conflict evidence
+ARM,Armenia,True,True,True,True,Complete conflict evidence
+AZE,Azerbaijan,True,True,True,True,Complete conflict evidence
+BHS,Bahamas,True,True,True,True,Complete conflict evidence
+BHR,Bahrain,True,True,True,True,Complete conflict evidence
+BGD,Bangladesh,True,True,True,True,Complete conflict evidence
+BRB,Barbados,True,True,True,True,Complete conflict evidence
+BLR,Belarus,True,True,True,True,Complete conflict evidence
+BLZ,Belize,True,True,True,True,Complete conflict evidence
+BEN,Benin,True,True,True,True,Complete conflict evidence
+BTN,Bhutan,True,True,True,True,Complete conflict evidence
+BOL,Bolivia,True,True,True,True,Complete conflict evidence
+BIH,Bosnia and Herzegovina,True,True,True,True,Complete conflict evidence
+BWA,Botswana,True,True,True,True,Complete conflict evidence
+BRA,Brazil,True,True,True,True,Complete conflict evidence
+BRN,Brunei Darussalam,True,True,True,True,Complete conflict evidence
+BFA,Burkina Faso,True,True,True,True,Complete conflict evidence
+BDI,Burundi,True,True,True,True,Complete conflict evidence
+CPV,Cabo Verde,True,True,True,True,Complete conflict evidence
+KHM,Cambodia,True,True,True,True,Complete conflict evidence
+CMR,Cameroon,True,True,True,True,Complete conflict evidence
+CAF,Central African Republic,True,True,True,True,Complete conflict evidence
+TCD,Chad,True,True,True,True,Complete conflict evidence
+CHL,Chile,True,True,True,True,Complete conflict evidence
+CHN,China,True,True,True,True,Complete conflict evidence
+COL,Colombia,True,True,True,True,Complete conflict evidence
+COM,Comoros,True,True,True,True,Complete conflict evidence
+COG,Congo,True,True,True,True,Complete conflict evidence
+COD,Congo DR,True,True,True,True,Complete conflict evidence
+CRI,Costa Rica,True,True,True,True,Complete conflict evidence
+CUB,Cuba,True,True,True,True,Complete conflict evidence
+CIV,Côte d'Ivoire,True,True,True,True,Complete conflict evidence
+DJI,Djibouti,True,True,True,True,Complete conflict evidence
+DMA,Dominica,True,True,True,True,Complete conflict evidence
+DOM,Dominican Republic,True,True,True,True,Complete conflict evidence
+ECU,Ecuador,True,True,True,True,Complete conflict evidence
+EGY,Egypt,True,True,True,True,Complete conflict evidence
+SLV,El Salvador,True,True,True,True,Complete conflict evidence
+GNQ,Equatorial Guinea,True,True,True,True,Complete conflict evidence
+ERI,Eritrea,True,True,True,True,Complete conflict evidence
+SWZ,Eswatini,True,True,True,True,Complete conflict evidence
+ETH,Ethiopia,True,True,True,True,Complete conflict evidence
+FJI,Fiji,True,True,True,True,Complete conflict evidence
+GAB,Gabon,True,True,True,True,Complete conflict evidence
+GMB,Gambia,True,True,True,True,Complete conflict evidence
+GEO,Georgia,True,True,True,True,Complete conflict evidence
+GHA,Ghana,True,True,True,True,Complete conflict evidence
+GTM,Guatemala,True,True,True,True,Complete conflict evidence
+GIN,Guinea,True,True,True,True,Complete conflict evidence
+GNB,Guinea-Bissau,True,True,True,True,Complete conflict evidence
+GUY,Guyana,True,True,True,True,Complete conflict evidence
+HTI,Haiti,True,True,True,True,Complete conflict evidence
+HND,Honduras,True,True,True,True,Complete conflict evidence
+IND,India,True,True,True,True,Complete conflict evidence
+IDN,Indonesia,True,True,True,True,Complete conflict evidence
+IRN,Iran,True,True,True,True,Complete conflict evidence
+IRQ,Iraq,True,True,True,True,Complete conflict evidence
+ISR,Israel,True,True,True,True,Complete conflict evidence
+JAM,Jamaica,True,True,True,True,Complete conflict evidence
+JOR,Jordan,True,True,True,True,Complete conflict evidence
+KAZ,Kazakhstan,True,True,True,True,Complete conflict evidence
+KEN,Kenya,True,True,True,True,Complete conflict evidence
+KIR,Kiribati,True,False,True,True,Missing modifier treated as neutral: ACLED Trends
+PRK,Korea DPR,True,True,True,True,Complete conflict evidence
+KOR,Korea Republic of,True,True,True,True,Complete conflict evidence
+KWT,Kuwait,True,True,True,True,Complete conflict evidence
+KGZ,Kyrgyzstan,True,True,True,True,Complete conflict evidence
+LAO,Lao PDR,True,True,True,True,Complete conflict evidence
+LBN,Lebanon,True,True,True,True,Complete conflict evidence
+LSO,Lesotho,True,True,True,True,Complete conflict evidence
+LBR,Liberia,True,True,True,True,Complete conflict evidence
+LBY,Libya,True,True,True,True,Complete conflict evidence
+MDG,Madagascar,True,True,True,True,Complete conflict evidence
+MWI,Malawi,True,True,True,True,Complete conflict evidence
+MYS,Malaysia,True,True,True,True,Complete conflict evidence
+MDV,Maldives,True,True,True,True,Complete conflict evidence
+MLI,Mali,True,True,True,True,Complete conflict evidence
+MHL,Marshall Islands,True,True,True,True,Complete conflict evidence
+MRT,Mauritania,True,True,True,True,Complete conflict evidence
+MUS,Mauritius,True,True,True,True,Complete conflict evidence
+MEX,Mexico,True,True,True,True,Complete conflict evidence
+FSM,Micronesia,True,False,True,True,Missing modifier treated as neutral: ACLED Trends
+MDA,Moldova Republic of,True,True,True,True,Complete conflict evidence
+MNG,Mongolia,True,True,True,True,Complete conflict evidence
+MNE,Montenegro,True,True,True,True,Complete conflict evidence
+MAR,Morocco,True,True,True,True,Complete conflict evidence
+MOZ,Mozambique,True,True,True,True,Complete conflict evidence
+MMR,Myanmar,True,True,True,True,Complete conflict evidence
+NAM,Namibia,True,True,True,True,Complete conflict evidence
+NRU,Nauru,True,False,True,True,Missing modifier treated as neutral: ACLED Trends
+NPL,Nepal,True,True,True,True,Complete conflict evidence
+NIC,Nicaragua,True,True,True,True,Complete conflict evidence
+NER,Niger,True,True,True,True,Complete conflict evidence
+NGA,Nigeria,True,True,True,True,Complete conflict evidence
+MKD,North Macedonia,True,True,True,True,Complete conflict evidence
+OMN,Oman,True,True,True,True,Complete conflict evidence
+PAK,Pakistan,True,True,True,True,Complete conflict evidence
+PLW,Palau,True,True,True,True,Complete conflict evidence
+PAN,Panama,True,True,True,True,Complete conflict evidence
+PNG,Papua New Guinea,True,True,True,True,Complete conflict evidence
+PRY,Paraguay,True,True,True,True,Complete conflict evidence
+PER,Peru,True,True,True,True,Complete conflict evidence
+PHL,Philippines,True,True,True,True,Complete conflict evidence
+QAT,Qatar,True,True,True,True,Complete conflict evidence
+RUS,Russian Federation,True,True,True,True,Complete conflict evidence
+RWA,Rwanda,True,True,True,True,Complete conflict evidence
+KNA,Saint Kitts and Nevis,True,True,True,True,Complete conflict evidence
+LCA,Saint Lucia,True,True,True,True,Complete conflict evidence
+VCT,Saint Vincent and the Grenadines,True,True,True,True,Complete conflict evidence
+WSM,Samoa,True,True,True,True,Complete conflict evidence
+STP,Sao Tome and Principe,True,True,True,True,Complete conflict evidence
+SEN,Senegal,True,True,True,True,Complete conflict evidence
+SRB,Serbia,True,True,True,True,Complete conflict evidence
+SYC,Seychelles,True,True,True,True,Complete conflict evidence
+SLE,Sierra Leone,True,True,True,True,Complete conflict evidence
+SLB,Solomon Islands,True,True,True,True,Complete conflict evidence
+SOM,Somalia,True,True,True,True,Complete conflict evidence
+ZAF,South Africa,True,True,True,True,Complete conflict evidence
+SSD,South Sudan,True,True,True,True,Complete conflict evidence
+LKA,Sri Lanka,True,True,True,True,Complete conflict evidence
+SDN,Sudan,True,True,True,True,Complete conflict evidence
+SUR,Suriname,True,True,True,True,Complete conflict evidence
+SYR,Syria,True,True,True,True,Complete conflict evidence
+TJK,Tajikistan,True,True,True,True,Complete conflict evidence
+TZA,Tanzania,True,True,True,True,Complete conflict evidence
+THA,Thailand,True,True,True,True,Complete conflict evidence
+TLS,Timor-Leste,True,True,True,True,Complete conflict evidence
+TGO,Togo,True,True,True,True,Complete conflict evidence
+TON,Tonga,True,True,True,True,Complete conflict evidence
+TTO,Trinidad and Tobago,True,True,True,True,Complete conflict evidence
+TUN,Tunisia,True,True,True,True,Complete conflict evidence
+TKM,Turkmenistan,True,True,True,True,Complete conflict evidence
+TUV,Tuvalu,True,False,True,True,Missing modifier treated as neutral: ACLED Trends
+TUR,Türkiye,True,True,True,True,Complete conflict evidence
+UGA,Uganda,True,True,True,True,Complete conflict evidence
+UKR,Ukraine,True,True,True,True,Complete conflict evidence
+URY,Uruguay,True,True,True,True,Complete conflict evidence
+UZB,Uzbekistan,True,True,True,True,Complete conflict evidence
+VUT,Vanuatu,True,True,True,True,Complete conflict evidence
+VEN,Venezuela,True,True,True,True,Complete conflict evidence
+VNM,Viet Nam,True,True,True,True,Complete conflict evidence
+YEM,Yemen,True,True,True,True,Complete conflict evidence
+ZMB,Zambia,True,True,True,True,Complete conflict evidence
+ZWE,Zimbabwe,True,True,True,True,Complete conflict evidence
+PSE,oPt,True,True,True,True,Complete conflict evidence

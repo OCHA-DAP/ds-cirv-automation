@@ -1,0 +1,74 @@
+﻿ISO3,CERF_Country,Source_Country,ASAP_Date,ASAP_Hotspot,ASAP_Status,asap0_id
+AFG,Afghanistan,Afghanistan,2026-10-11,1,Hotspot,1
+DZA,Algeria,Algeria,2026-10-11,0,No hotspot,54
+AGO,Angola,Angola,2026-10-11,0,No hotspot,2
+BGD,Bangladesh,Bangladesh,2026-10-11,0,No hotspot,18
+BEN,Benin,Benin,2026-10-11,1,Hotspot,16
+BOL,Bolivia,Bolivia,2026-10-11,0,No hotspot,25
+BWA,Botswana,Botswana,2026-10-11,0,No hotspot,30
+BFA,Burkina Faso,Burkina Faso,2026-10-11,1,Hotspot,17
+BDI,Burundi,Burundi,2026-10-11,1,Hotspot,14
+CMR,Cameroon,Cameroon,2026-10-11,0,No hotspot,37
+CAF,Central African Republic,C. African Rep.,2026-10-11,0,No hotspot,31
+TCD,Chad,Chad,2026-10-11,1,Hotspot,184
+COL,Colombia,Colombia,2026-10-11,1,Hotspot,40
+COG,Congo,Congo,2026-10-11,0,No hotspot,39
+COD,Congo DR,D.R. Congo,2026-10-11,1,Hotspot,38
+CUB,Cuba,Cuba,2026-10-11,0,No hotspot,44
+CIV,Côte d'Ivoire,Côte D'Ivoire,2026-10-11,0,No hotspot,36
+DJI,Djibouti,Djibouti,2026-10-11,0,No hotspot,50
+ECU,Ecuador,Ecuador,2026-10-11,0,No hotspot,55
+EGY,Egypt,Egypt,2026-10-11,0,No hotspot,56
+SLV,El Salvador,El Salvador,2026-10-11,1,Hotspot,172
+GNQ,Equatorial Guinea,Eq. Guinea,2026-10-11,0,No hotspot,76
+ERI,Eritrea,Eritrea,2026-10-11,1,Hotspot,57
+SWZ,Eswatini,Eswatini,2026-10-11,0,No hotspot,182
+ETH,Ethiopia,Ethiopia,2026-10-11,1,Hotspot,61
+GMB,Gambia,Gambia,2026-10-11,0,No hotspot,74
+GHA,Ghana,Ghana,2026-10-11,0,No hotspot,71
+GTM,Guatemala,Guatemala,2026-10-11,0,No hotspot,79
+GIN,Guinea,Guinea,2026-10-11,0,No hotspot,72
+GNB,Guinea-Bissau,Guinea-Bissau,2026-10-11,0,No hotspot,75
+HTI,Haiti,Haiti,2026-10-11,0,No hotspot,87
+HND,Honduras,Honduras,2026-10-11,1,Hotspot,85
+IRN,Iran,Iran,2026-10-11,0,No hotspot,93
+IRQ,Iraq,Iraq,2026-10-11,0,No hotspot,94
+KAZ,Kazakhstan,Kazakhstan,2026-10-11,0,No hotspot,101
+KEN,Kenya,Kenya,2026-10-11,1,Hotspot,102
+PRK,Korea DPR,North Korea,2026-10-11,0,No hotspot,154
+KGZ,Kyrgyzstan,Kyrgyzstan,2026-10-11,0,No hotspot,103
+LSO,Lesotho,Lesotho,2026-10-11,0,No hotspot,114
+LBR,Liberia,Liberia,2026-10-11,0,No hotspot,110
+LBY,Libya,Libya,2026-10-11,0,No hotspot,111
+MDG,Madagascar,Madagascar,2026-10-11,1,Hotspot,120
+MWI,Malawi,Malawi,2026-10-11,0,No hotspot,132
+MLI,Mali,Mali,2026-10-11,1,Hotspot,123
+MRT,Mauritania,Mauritania,2026-10-11,0,No hotspot,129
+MAR,Morocco,Morocco,2026-10-11,0,No hotspot,118
+MOZ,Mozambique,Mozambique,2026-10-11,0,No hotspot,128
+NAM,Namibia,Namibia,2026-10-11,0,No hotspot,135
+NPL,Nepal,Nepal,2026-10-11,0,No hotspot,143
+NIC,Nicaragua,Nicaragua,2026-10-11,1,Hotspot,139
+NER,Niger,Niger,2026-10-11,0,No hotspot,137
+NGA,Nigeria,Nigeria,2026-10-11,1,Hotspot,138
+PAK,Pakistan,Pakistan,2026-10-11,0,No hotspot,146
+PER,Peru,Peru,2026-10-11,1,Hotspot,148
+RWA,Rwanda,Rwanda,2026-10-11,1,Hotspot,163
+SEN,Senegal,Senegal,2026-10-11,0,No hotspot,166
+SLE,Sierra Leone,Sierra Leone,2026-10-11,0,No hotspot,171
+SOM,Somalia,Somalia,2026-10-11,2,Major hotspot,173
+ZAF,South Africa,South Africa,2026-10-11,0,No hotspot,219
+SSD,South Sudan,South Sudan,2026-10-11,2,Major hotspot,176
+LKA,Sri Lanka,Sri Lanka,2026-10-11,0,No hotspot,113
+SDN,Sudan,Sudan,2026-10-11,2,Major hotspot,165
+SYR,Syria,Syria,2026-10-11,1,Hotspot,183
+TJK,Tajikistan,Tajikistan,2026-10-11,0,No hotspot,187
+TZA,Tanzania,Tanzania,2026-10-11,0,No hotspot,195
+TGO,Togo,Togo,2026-10-11,0,No hotspot,185
+TUN,Tunisia,Tunisia,2026-10-11,0,No hotspot,192
+TKM,Turkmenistan,Turkmenistan,2026-10-11,0,No hotspot,188
+UGA,Uganda,Uganda,2026-10-11,1,Hotspot,196
+UZB,Uzbekistan,Uzbekistan,2026-10-11,0,No hotspot,200
+YEM,Yemen,Yemen,2026-10-11,1,Hotspot,218
+ZMB,Zambia,Zambia,2026-10-11,0,No hotspot,220
+ZWE,Zimbabwe,Zimbabwe,2026-10-11,0,No hotspot,221

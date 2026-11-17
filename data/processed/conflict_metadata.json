@@ -1,0 +1,14 @@
+{
+  "processor": "CERF CIRV Conflict",
+  "generated_at_utc": "2026-11-04T19:50:30.234313+00:00",
+  "wci_source_max": 7.57,
+  "wci_source_max_description": "Workbook min-max; supplied source minimum=0.0; maximum=7.57",
+  "methodology": {
+    "wci": "raw WCI divided by the applicable current-period source maximum and multiplied by 100",
+    "trends": "event count under 5 is neutral 50; otherwise fixed 0/25/50/75/100 percentage-change bands",
+    "crisiswatch": "(deteriorations - ameliorations + risk alerts) * 100/12, capped to 0..100",
+    "consolidated": "normalized WCI + .20*(Trends-50) + .20*(CrisisWatch-50), capped to 0..100"
+  },
+  "countries": 150,
+  "countries_with_conflict": 150
+}

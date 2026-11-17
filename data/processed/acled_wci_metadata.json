@@ -1,0 +1,17 @@
+{
+  "source": "ACLED Weekly Conflict Index",
+  "methodology": "Highest WCI score observed for each country during the trailing three calendar months.",
+  "refresh_date": "2026-10-31",
+  "window_start_exclusive": "2026-07-31",
+  "window_end_inclusive": "2026-10-31",
+  "lookback_months": 3,
+  "source_url": "https://acleddata.com/system/files/2026-11/weekly_index_scores_2026-11-04.xlsx",
+  "acquisition_method": "requests",
+  "detected_columns": {
+    "country": "country",
+    "iso3": "country",
+    "score": "score",
+    "date": "week"
+  },
+  "mapped_countries": 150
+}

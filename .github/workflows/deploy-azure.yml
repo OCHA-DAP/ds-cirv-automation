@@ -10,8 +10,8 @@
 # The startup command and any app settings are set in Azure, not in this file;
 # ask the data science team to change them.
 #
-# Auth: the AZURE_WEBAPP_PUBLISH_PROFILE repo secret, which can only deploy to
-# this one slot.
+# Auth: the AZURE_WEBAPP_PUBLISH_PROFILE repo secret, the publish profile of
+# this one slot (full access to the slot, nothing else). See DEPLOY.md.
 
 name: Deploy to Azure
 
@@ -27,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Check requirements.txt exists
         run: |

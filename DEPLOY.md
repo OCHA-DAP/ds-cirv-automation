@@ -45,6 +45,32 @@ The startup command is set on Azure, not in this repo. To serve a different file
 - **No saved files.** Anything the app writes on the server is lost when the app restarts or is redeployed. To update the data, run the refresh on your laptop, commit the new CSV files, and deploy again.
 - **No secrets.** The repo and the app are both public, so never commit passwords or API keys. If the app needs a key on the server, ask the data science team.
 
+## Secrets: ACLED login and deploy key
+
+These are stored as **GitHub repo secrets** (Settings → Secrets and variables → Actions). Only GitHub Actions workflows in this repo can use them. You can't see or change them, because that needs admin access to the repo; ask the data science team.
+
+| Secret | What it is | Used by |
+|---|---|---|
+| `AZURE_WEBAPP_PUBLISH_PROFILE` | Deploy key for the Azure app | the Deploy to Azure workflow |
+| `ACLED_USERNAME`, `ACLED_PASSWORD` | An ACLED login from the data science team | nothing yet: for a future workflow that runs the ACLED collectors |
+
+**The ACLED login is not on the Azure server, on purpose.** The app doesn't call ACLED when it shows pages, and anyone who can push to this repo could read the server's settings.
+
+**How the collectors get the ACLED login:** `collectors/acled_auth.py` reads it from `config/acled_credentials.json` (gitignored), not from environment variables. On your laptop, keep using your own file. In a GitHub Actions workflow, write the file from the secrets before running the collectors:
+
+```yaml
+- name: Write ACLED credentials file
+  env:
+    ACLED_USERNAME: ${{ secrets.ACLED_USERNAME }}
+    ACLED_PASSWORD: ${{ secrets.ACLED_PASSWORD }}
+  run: >
+    python -c "import json, os;
+    json.dump({k: os.environ[k] for k in ('ACLED_USERNAME', 'ACLED_PASSWORD')},
+    open('config/acled_credentials.json', 'w'))"
+```
+
+Never print the secrets in a workflow or commit the file it writes.
+
 ## If something goes wrong
 
 - **The deploy step fails.** If the error is a 503 or "Service Unavailable", the shared server is busy: wait a few minutes and run the workflow again. Otherwise it is usually `requirements.txt` (a misspelt package or a version with no Python 3.14 build). Ask the data science team for the build log.

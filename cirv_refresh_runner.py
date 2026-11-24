@@ -53,6 +53,23 @@ def worker(mode,outlook):
    modules+=['iasc_horizon','iasc_scaleup']
    commands += [(m,[sys.executable,'-m','collectors.'+m]) for m in modules]
   commands += [(m,[sys.executable,'-m','processors.'+m]) for m in ['food_security','conflict','iasc']]
+  if mode == 'all':
+   commands.extend([
+    ('FTS plan and country funding', [sys.executable, '-m', 'collectors.fts_hnrp']),
+    ('FTS funding tables', [sys.executable, '-m', 'processors.fts_hnrp']),
+   ])
+  elif (stage / 'data' / 'processed' / 'fts_plans_current.csv').is_file():
+   commands.append(('FTS funding tables', [sys.executable, '-m', 'processors.fts_hnrp']))
+  # FTS outputs must be regenerated on a full refresh.
+  fts_outputs = (
+   'fts_funding_detailed.csv',
+   'fts_country_annual.csv',
+   'fts_country_combined.csv',
+  )
+  fts_dir = stage / 'data' / 'processed'
+  if mode == 'all':
+   for name in fts_outputs:
+    (fts_dir / name).unlink(missing_ok=True)
   with log.open('w',encoding='utf-8') as output:
    for index,(name,cmd) in enumerate(commands,1):
     report(step=name,completed=index-1,total=len(commands))
@@ -64,6 +81,14 @@ def worker(mode,outlook):
   result=app.assemble(app.reference(stage),root=stage)
   errors=result[-1]
   if errors:raise RuntimeError('App validation failed: '+'; '.join(map(str,errors)))
+  if mode == 'all':
+   report(step='Validate FTS funding outputs')
+   missing = [
+    name for name in fts_outputs
+    if not (fts_dir / name).is_file() or (fts_dir / name).stat().st_size == 0
+   ]
+   if missing:
+    raise RuntimeError('Missing or empty FTS outputs: ' + ', '.join(missing))
   snapshot=RUNTIME/'snapshots'/run;snapshot.mkdir(parents=True)
   for p in stage.rglob('*.csv'):
    target=snapshot/p.relative_to(stage);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target)

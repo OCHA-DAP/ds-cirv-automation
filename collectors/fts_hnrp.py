@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 from datetime import datetime, timezone
 import csv
 import time
@@ -15,7 +15,12 @@ PROJECT = Path(__file__).resolve().parent.parent
 OUTPUT = PROJECT / "data" / "processed"
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
-YEARS = [2025, 2026]
+HNRP_TYPES = {
+    "humanitarian needs and response plan",
+    "humanitarian response plan",
+    "hnrp",
+    "hrp",
+}
 
 HPC_API = "https://api.hpc.tools/v2/public/plan"
 FTS_API = "https://api.hpc.tools/v1/public/fts/flow"
@@ -175,7 +180,63 @@ def extract_plan(plan, year):
 # BUILD DATASET
 # ==================================================
 
-def collect():
+def has_released_hnrp(plans, year):
+    for plan in plans:
+        info = extract_plan(plan, year)
+        types = {t.strip().lower() for t in info["plan_type"].split(";")}
+        if len(info["countries"]) == 1 and types.intersection(HNRP_TYPES):
+            try:
+                if float(info["requirements_usd"]) > 0:
+                    return True
+            except (TypeError, ValueError):
+                pass
+    return False
+
+
+def reporting_window():
+    today = datetime.now(timezone.utc).year
+    cache = {}
+
+    def plans_for(year):
+        if year not in cache:
+            cache[year] = get_plans(year)
+        return cache[year]
+
+    # Check next year so a release can trigger rollover before January.
+    for current in (today + 1, today, today - 1):
+        if has_released_hnrp(plans_for(current), current):
+            previous = current - 1
+            if not plans_for(previous):
+                raise RuntimeError(f"No released plans returned for {previous}.")
+            return {year: plans_for(year) for year in (previous, current)}
+    raise RuntimeError("No recent released single-country HNRPs found.")
+
+
+def collect_country_totals(year):
+    payload = fetch_json(FTS_API, {"year": year, "groupby": "location"})
+    funding = payload["data"]["report3"]["fundingTotals"]
+    retrieved_at = datetime.now(timezone.utc).isoformat()
+    records = []
+    for group in funding.get("objects", []):
+        if group.get("direction") != "destination":
+            continue
+        for item in group.get("objectsBreakdown", []):
+            if item.get("id") is None or item.get("totalFunding") is None:
+                continue
+            records.append({
+                "year": year,
+                "report": "report3",
+                "location_id": item["id"],
+                "country": item.get("name"),
+                "total_funding_usd": item["totalFunding"],
+                "retrieved_at_utc": retrieved_at,
+            })
+    if not records:
+        raise RuntimeError(f"No FTS report3 destination totals for {year}.")
+    return records
+
+
+def collect(plans_by_year):
 
     records = []
 
@@ -183,14 +244,12 @@ def collect():
         timezone.utc
     ).isoformat()
 
-    for year in YEARS:
+    for year, plans in plans_by_year.items():
 
         print()
         print("=" * 60)
         print(f"COLLECTING FTS DATA: {year}")
         print("=" * 60)
-
-        plans = get_plans(year)
 
         print("Released plans:", len(plans))
 
@@ -331,10 +390,14 @@ def save_csv(path, records):
 
 def main():
 
-    records = collect()
+    plans_by_year = reporting_window()
+    current = max(plans_by_year)
+    records = collect(plans_by_year)
+    totals = collect_country_totals(current)
+    save_csv(OUTPUT / f"fts_total_country_{current}_validation.csv", totals)
 
     # Preserve all plan-level records.
-    plan_file = OUTPUT / "fts_plans_2025_2026.csv"
+    plan_file = OUTPUT / "fts_plans_current.csv"
 
     save_csv(plan_file, records)
 

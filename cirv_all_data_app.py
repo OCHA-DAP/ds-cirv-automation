@@ -50,7 +50,54 @@ def reference(root=ROOT):
  return files[0]
 
 
+def public_template_data(path):
+    meta = json.loads(path.read_text(encoding="utf-8-sig"))
+    headers = meta.get("headers")
+    countries = meta.get("countries")
+
+    if isinstance(headers, list):
+        headers = dict(enumerate(headers, 1))
+    elif isinstance(headers, dict):
+        headers = {int(k): v for k, v in headers.items()}
+    if not isinstance(headers, dict) or set(headers) != set(range(1, 29)):
+        raise ValueError("Public metadata must contain headers for columns 1 through 28.")
+    headers = {k: str(v or "").strip() for k, v in headers.items()}
+
+    if isinstance(countries, dict):
+        countries = [{"iso3": k, "country": v} for k, v in countries.items()]
+    if not isinstance(countries, list):
+        raise ValueError("Public metadata must contain a countries list or ISO3-to-name mapping.")
+
+    records = []
+    for item in countries:
+        if isinstance(item, dict):
+            keys = {str(k).lower(): v for k, v in item.items()}
+            iso = keys.get("iso3") or keys.get("2")
+            name = (keys.get("country") or keys.get("cerf_country")
+                    or keys.get("name") or keys.get("1"))
+        elif isinstance(item, (list, tuple)) and len(item) == 2:
+            first, second = item
+            if re.fullmatch(r"[A-Z]{3}", str(first)):
+                iso, name = first, second
+            else:
+                name, iso = first, second
+        else:
+            raise ValueError("Expected a country name and ISO3 in each metadata entry.")
+        iso = str(iso or "").strip().upper()
+        if not re.fullmatch(r"[A-Z]{3}", iso) or not isinstance(name, str) or not name.strip():
+            raise ValueError("Invalid country name or ISO3 in public metadata.")
+        records.append((name.strip(), iso))
+
+    data = pd.DataFrame(records, columns=[1, 2]).reindex(columns=range(1, 29))
+    data.index = pd.Index(data[2], name="ISO3")
+    if len(data) != 150 or not data.index.is_unique:
+        raise ValueError("Expected 150 unique country codes in public metadata.")
+    return None, list(range(5, 5 + len(data))), headers, data
+
+
 def template_data(path):
+ if Path(path).suffix.lower() == ".json":
+  return public_template_data(Path(path))
  wb=load_workbook(path,data_only=True,read_only=False)
  ws=wb[SHEET]
  rows=[r for r in range(5,ws.max_row+1) if re.fullmatch('[A-Z]{3}',str(ws.cell(r,2).value or ''))]
@@ -649,13 +696,8 @@ def _set_template_cell(row, col, value):
  )
 
 
-def _update_original_funding_sheet(parts, sheets, rels):
- base = (
-  Path(__file__).resolve().parent
-  / "data"
-  / "processed"
- )
-
+def _update_original_funding_sheet(parts, sheets, rels, root=ROOT):
+ base = root / "data" / "processed"
  path = base / "fts_funding_detailed.csv"
 
  if not path.exists():
@@ -739,7 +781,7 @@ def _update_original_funding_sheet(parts, sheets, rels):
 
  _set_template_cell(
   row_at(1), 1,
-  "GHO Funding Coverage | 2025 and 2026"
+  "GHO Funding Coverage | " + " and ".join(str(y) for y in sorted(df["year"].astype(int).unique()))
  )
 
  _set_template_cell(
@@ -1217,7 +1259,7 @@ def _rename_dated_source_sheets(parts, sheets):
 
  return replacements
 
-def export_xlsx(path,rows,data,sources,status):
+def export_xlsx(path,rows,data,sources,status,root=ROOT):
  # Edit XML parts in place, preserving all original styles, drawings, conditional formatting and sheets.
  with zipfile.ZipFile(path) as z:parts={name:z.read(name) for name in z.namelist()}
  workbook=ET.fromstring(parts['xl/workbook.xml']);rels=ET.fromstring(parts['xl/_rels/workbook.xml.rels']);types=ET.fromstring(parts['[Content_Types].xml'])
@@ -1293,9 +1335,7 @@ def export_xlsx(path,rows,data,sources,status):
  _update_original_source_sheets(
   parts, sheets, rels, sources, data
  )
- _update_original_funding_sheet(
-  parts, sheets, rels
- )
+ _update_original_funding_sheet(parts, sheets, rels, root=root)
 
  # Dynamically rename current source worksheets.
  renamed_sheets = _rename_dated_source_sheets(
@@ -1812,13 +1852,12 @@ def table_html(wb, headers, data):
 
 
 
-def render_fts_scatterplots(cirv_data):
+def render_fts_scatterplots(cirv_data, root=ROOT):
  import streamlit as st
  import pandas as pd
  import numpy as np
  import plotly.graph_objects as go
 
- root = Path(__file__).resolve().parent
  funding_path = root / "data" / "processed" / "fts_country_combined.csv"
  annual_path = root / "data" / "processed" / "fts_country_annual.csv"
 
@@ -2306,20 +2345,55 @@ def _ocha_theme():
 def main():
  import streamlit as st
  st.set_page_config(page_title='CERF CIRV',layout='wide',page_icon=get_page_icon());_ocha_theme();st.title('CERF | CIRV All Data')
- try:path=reference();wb,rows,headers,data,sources,status,errors=assemble(path,root=refresh_controls())
+ try:
+  import os
+  public_mode = bool(os.getenv("WEBSITE_SITE_NAME"))
+  active_root = ROOT if public_mode else refresh_controls()
+  path = ROOT / "config" / "cirv_public_metadata.json" if public_mode else reference()
+  wb,rows,headers,data,sources,status,errors = assemble(path,root=active_root)
  except Exception as exc:st.error(str(exc));st.stop()
  st.caption('Source health: '+str(int((status['status']=='LOADED').sum()))+' of '+str(len(status))+' datasets loaded')
  for error in errors:st.error(error)
  st.caption('UN OCHA | Central Emergency Response Fund | Country risk and vulnerability analysis | Latest successfully processed source data')
  q=st.text_input('Filter country / ISO3')
  view=data[data[1].astype(str).str.contains(q,case=False,regex=False)|data[2].str.contains(q,case=False,regex=False)] if q else data
- st.markdown(table_html(wb,headers,view),unsafe_allow_html=True)
- render_fts_scatterplots(view)
+ if public_mode:
+  public_table = view[VISIBLE].copy()
+  labels = {c: headers[c] or f"Column {c}" for c in VISIBLE}
+  public_table.columns = [labels[c] if list(labels.values()).count(labels[c]) == 1
+                          else f"{labels[c]} ({c})" for c in VISIBLE]
+  st.dataframe(public_table, hide_index=True, use_container_width=True)
+ else:
+  st.markdown(table_html(wb,headers,view),unsafe_allow_html=True)
+ # Select one complete FTS dataset for charts and workbook.
+ fts_names = (
+     "fts_funding_detailed.csv",
+     "fts_country_annual.csv",
+     "fts_country_combined.csv",
+ )
+ def has_funding(root):
+     folder = root / "data" / "processed"
+     paths = [folder / name for name in fts_names]
+     return all(p.is_file() and p.stat().st_size > 0 for p in paths)
+
+ funding_root = active_root
+ project_root = Path(__file__).resolve().parent
+ if not has_funding(active_root) and has_funding(project_root):
+     funding_root = project_root
+     st.caption("Funding charts and workbook use the existing project funding data. "
+                "Funding has not been refreshed in the active snapshot.")
+ render_fts_scatterplots(view, root=funding_root)
+ if public_mode:
+  return  # Public preview does not expose internal downloads.
 
  if errors:st.warning('Complete export blocked until required source errors are resolved. Source sheets remain available for inspection.')
  else:
   flat=data[VISIBLE].rename(columns=headers)
   st.download_button('Download All Data CSV',flat.to_csv(index=False).encode('utf-8-sig'),'CERF_CIRV_All_Data_Current.csv','text/csv')
-  st.download_button('Download CIRV workbook',export_xlsx(path,rows,data,sources,status),'CERF_CIRV_Current.xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+  funding_detail = funding_root / "data" / "processed" / "fts_funding_detailed.csv"
+  if not funding_detail.is_file():
+      st.warning("Workbook download is unavailable until a successful Refresh All publishes the FTS funding data.")
+  else:
+      st.download_button('Download CIRV workbook',export_xlsx(path,rows,data,sources,status,root=funding_root),'CERF_CIRV_Current.xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__=='__main__':main()

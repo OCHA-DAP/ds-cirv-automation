@@ -3,7 +3,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "processed"
-SOURCE = OUT / "fts_plans_2025_2026.csv"
+SOURCE = OUT / "fts_plans_current.csv"
 
 SELECTED_2025 = {
     "BGD": 1212,
@@ -19,6 +19,14 @@ def main():
 
     for col in ["year", "plan_id", "requirements_usd", "funded_usd"]:
         df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    if df["year"].isna().any() or not df["year"].eq(df["year"].round()).all():
+        raise RuntimeError("FTS plans contain an invalid year.")
+    years = sorted(df["year"].astype(int).unique())
+    if len(years) != 2 or years[1] != years[0] + 1:
+        raise RuntimeError(f"Expected two consecutive FTS years, got {years}.")
+    previous, current = years
+    pair = f"{previous}_{current}"
 
     df["plan_scope"] = df["allocation_status"].map({
         "single_country": "Single-country plan",
@@ -69,7 +77,6 @@ def main():
     )
 
     detailed = OUT / "fts_funding_detailed.csv"
-    df.to_csv(detailed, index=False, encoding="utf-8-sig")
 
     country = df[df["scatterplot_eligible"]].copy()
 
@@ -78,7 +85,6 @@ def main():
     )
 
     annual = OUT / "fts_country_annual.csv"
-    country.to_csv(annual, index=False, encoding="utf-8-sig")
 
     wide = country.pivot(
         index="iso3",
@@ -93,88 +99,51 @@ def main():
 
     wide = wide.reset_index()
 
-    required = [
-        "requirements_usd_2025",
-        "requirements_usd_2026",
-        "funded_usd_2025",
-        "funded_usd_2026",
-    ]
+    if set(country["year"].astype(int)) != set(years):
+        raise RuntimeError(f"No eligible country-plan rows for one of {years}.")
 
+    previous_req = f"requirements_usd_{previous}"
+    current_req = f"requirements_usd_{current}"
+    previous_funded = f"funded_usd_{previous}"
+    current_funded = f"funded_usd_{current}"
+    required = [previous_req, current_req, previous_funded, current_funded]
     for col in required:
         if col not in wide:
             wide[col] = float("nan")
 
-    wide["eligible_2025_2026"] = wide[required].notna().all(axis=1)
+    eligible_col = f"eligible_{pair}"
+    wide[eligible_col] = wide[required].notna().all(axis=1)
+    wide["requirements_combined"] = wide[previous_req] + wide[current_req]
+    wide["funded_combined"] = wide[previous_funded] + wide[current_funded]
+    wide[f"coverage_{pair}"] = wide["funded_combined"] / wide["requirements_combined"]
+    wide[f"coverage_{current}_plan"] = wide[current_funded] / wide[current_req]
 
-    wide["requirements_combined"] = (
-        wide["requirements_usd_2025"] + wide["requirements_usd_2026"]
-    )
+    totals = pd.read_csv(OUT / f"fts_total_country_{current}_validation.csv")
+    totals = totals.loc[totals["report"].eq("report3")].copy()
+    if totals.empty or not pd.to_numeric(totals["year"], errors="coerce").eq(current).all():
+        raise RuntimeError(f"Missing or wrong-year country totals for {current}.")
+    totals = totals.dropna(subset=["country"])
+    totals["country_key"] = totals["country"].str.strip().str.casefold()
+    if totals["country_key"].duplicated().any():
+        raise RuntimeError("Duplicate FTS destination names; check the country totals.")
+    totals["total_funding_usd"] = pd.to_numeric(totals["total_funding_usd"], errors="coerce")
+    funding_map = totals.set_index("country_key")["total_funding_usd"]
 
-    wide["funded_combined"] = (
-        wide["funded_usd_2025"]
-        + wide["funded_usd_2026"]
-    )
-
-    wide["coverage_2025_2026"] = (
-        wide["funded_combined"] / wide["requirements_combined"]
-    )
-
-    wide["coverage_2026_plan"] = (
-        wide["funded_usd_2026"] / wide["requirements_usd_2026"]
-    )
-
-
-    # Load latest collected 2026 total country funding.
-    total_path = OUT / "fts_total_country_2026_validation.csv"
-
-    wide["total_funded_usd_2026"] = float("nan")
-
-    if total_path.exists():
-        totals = pd.read_csv(total_path)
-
-        totals = totals[
-            totals["report"] == "report3"
-        ].copy()
-
-        if totals["country"].duplicated().any():
-            raise RuntimeError(
-                "Duplicate FTS country funding records."
-            )
-
-        funding_map = totals.set_index(
-            "country"
-        )["total_funding_usd"]
-
-        names_map = (
-            country.drop_duplicates("iso3")
-            .set_index("iso3")["country"]
-        )
-
-        wide["total_funded_usd_2026"] = (
-            wide["iso3"]
-            .map(names_map)
-            .map(funding_map)
-        )
-
-    wide["coverage_2026_total"] = (
-        wide["total_funded_usd_2026"]
-        / wide["requirements_usd_2026"]
-    )
-
-    wide.loc[
-        wide["requirements_usd_2026"].isna()
-        | (wide["requirements_usd_2026"] <= 0),
-        "coverage_2026_total"
-    ] = float("nan")
-
-    names = country.drop_duplicates("iso3").set_index("iso3")["country"]
+    names = (country.sort_values("year", ascending=False)
+             .drop_duplicates("iso3").set_index("iso3")["country"])
     wide.insert(1, "country", wide["iso3"].map(names))
+    total_col = f"total_funded_usd_{current}"
+    wide[total_col] = wide["country"].str.strip().str.casefold().map(funding_map)
+    wide[f"coverage_{current}_total"] = wide[total_col] / wide[current_req]
+    if not wide[f"coverage_{current}_total"].notna().any():
+        raise RuntimeError(f"No country totals match eligible {current} plans.")
 
-    wide["exclusion_reason_2025_2026"] = ""
-    wide.loc[
-        ~wide["eligible_2025_2026"],
-        "exclusion_reason_2025_2026"
-    ] = "Missing eligible plan in 2025 or 2026"
+    wide[f"exclusion_reason_{pair}"] = ""
+    wide.loc[~wide[eligible_col], f"exclusion_reason_{pair}"] = (
+        f"Missing eligible plan in {previous} or {current}"
+    )
+    df.to_csv(detailed, index=False, encoding="utf-8-sig")
+    country.to_csv(annual, index=False, encoding="utf-8-sig")
 
     combined = OUT / "fts_country_combined.csv"
     wide.to_csv(combined, index=False, encoding="utf-8-sig")
@@ -183,11 +152,11 @@ def main():
     print("Detailed plan records:", len(df))
     print("Eligible annual country records:", len(country))
     print("Countries in combined dataset:", len(wide))
-    print("Countries eligible for 2025+2026:", int(wide["eligible_2025_2026"].sum()))
+    print(f"Countries eligible for {previous}+{current}:", int(wide[eligible_col].sum()))
     print("Saved:", detailed)
     print("Saved:", annual)
     print("Saved:", combined)
-    print("2026 total country funding: pending separate collection")
+    print(f"{current} country total funding matched:", int(wide[total_col].notna().sum()))
 
 
 if __name__ == "__main__":

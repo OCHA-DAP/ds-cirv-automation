@@ -1848,7 +1848,79 @@ def table_html(wb, headers, data):
                     "max-width": str(cell_width) + "px",
                 })
 
+
+
+
+    # Final override for both CERF multi-indicator headings.
+    # Apply after all other table formatting.
+    for th in table.find_all("th"):
+        label = th.get_text(" ", strip=True)
+
+        if "CERF- Multi-Indicator Consolidated" in label:
+            existing = th.get("style", "")
+
+            # Remove conflicting background declarations.
+            declarations = [
+                x.strip()
+                for x in existing.split(";")
+                if x.strip()
+                and not x.strip().lower().startswith(
+                    ("background:", "background-color:")
+                )
+            ]
+
+            declarations.extend([
+                "background:#FFCF8F !important",
+                "background-color:#FFCF8F !important",
+                "font-weight:700 !important",
+                "color:#172536 !important",
+            ])
+
+            th["style"] = ";".join(declarations) + ";"
+
+
+    # Final override for both CERF multi-indicator headings.
+    # Apply after all other table formatting.
+    for th in table.find_all("th"):
+        label = th.get_text(" ", strip=True)
+
+        if "CERF- Multi-Indicator Consolidated" in label:
+            existing = th.get("style", "")
+
+            # Remove conflicting background declarations.
+            declarations = [
+                x.strip()
+                for x in existing.split(";")
+                if x.strip()
+                and not x.strip().lower().startswith(
+                    ("background:", "background-color:")
+                )
+            ]
+
+            declarations.extend([
+                "background:#FFCF8F !important",
+                "background-color:#FFCF8F !important",
+                "font-weight:700 !important",
+                "color:#172536 !important",
+            ])
+
+            th["style"] = ";".join(declarations) + ";"
+
+
+    # Use HTML bgcolor as a fallback when Streamlit strips
+    # background-color from inline CSS.
+    for th in table.find_all("th"):
+        label = th.get_text(" ", strip=True)
+
+        if "CERF- Multi-Indicator Consolidated" in label:
+            th["bgcolor"] = "#FFCF8F"
+
     return str(soup)
+
+
+
+
+
 
 
 
@@ -2002,7 +2074,7 @@ def render_fts_scatterplots(cirv_data, root=ROOT):
   plot = merged[
    ["country", "iso3", "cirv_score", coverage_col, req_col, funded_col]
   ].copy()
-  
+
   # Validate comparable data before building the exception list.
   for column in ["cirv_score", coverage_col, req_col, funded_col]:
    plot[column] = pd.to_numeric(plot[column], errors="coerce")
@@ -2362,7 +2434,14 @@ def main():
   labels = {c: headers[c] or f"Column {c}" for c in VISIBLE}
   public_table.columns = [labels[c] if list(labels.values()).count(labels[c]) == 1
                           else f"{labels[c]} ({c})" for c in VISIBLE]
-  st.dataframe(public_table, hide_index=True, use_container_width=True)
+  format_path = ROOT / "config" / "cirv_public_format.xlsx"
+  if not format_path.is_file():
+      raise FileNotFoundError("Public formatting template missing.")
+  format_wb = load_workbook(format_path, data_only=True)
+  try:
+      st.markdown(table_html(format_wb, headers, view), unsafe_allow_html=True)
+  finally:
+      format_wb.close()
  else:
   st.markdown(table_html(wb,headers,view),unsafe_allow_html=True)
  # Select one complete FTS dataset for charts and workbook.

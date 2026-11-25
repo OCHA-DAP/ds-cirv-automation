@@ -2424,7 +2424,7 @@ def main():
   path = ROOT / "config" / "cirv_public_metadata.json" if public_mode else reference()
   wb,rows,headers,data,sources,status,errors = assemble(path,root=active_root)
  except Exception as exc:st.error(str(exc));st.stop()
- st.caption('Source health: '+str(int((status['status']=='LOADED').sum()))+' of '+str(len(status))+' datasets loaded')
+ st.caption('Source health: '+str(int((status['status']=='LOADED').sum()))+' of '+str(len(REGISTRY))+' datasets loaded')
  for error in errors:st.error(error)
  st.caption('UN OCHA | Central Emergency Response Fund | Country risk and vulnerability analysis | Latest successfully processed source data')
  q=st.text_input('Filter country / ISO3')

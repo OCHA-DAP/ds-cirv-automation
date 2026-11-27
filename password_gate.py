@@ -1,9 +1,9 @@
 """Password prompt for the hosted CIRV app.
 
 Uses the team's usual password for protected pages. Only the SHA-256 hash is
-stored here, because this repo is public. The check runs on the server, so the
-page shows nothing else until the right password is entered. The password is
-asked for again after a page reload.
+stored here, because this repo is public. The check runs on the server, so no
+data, tables or charts are sent until the right password is entered. The
+password is asked for again after a page reload.
 """
 import hashlib
 import hmac

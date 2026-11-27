@@ -2417,6 +2417,10 @@ def _ocha_theme():
 def main():
  import streamlit as st
  st.set_page_config(page_title='CERF CIRV',layout='wide',page_icon=get_page_icon());_ocha_theme();st.title('CERF | CIRV All Data')
+ import os
+ if os.getenv("WEBSITE_SITE_NAME"):
+  from password_gate import require_password
+  require_password()
  try:
   import os
   public_mode = bool(os.getenv("WEBSITE_SITE_NAME"))
